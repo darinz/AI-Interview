@@ -40,6 +40,12 @@ This folder contains machine learning interview questions organized based on **C
 
 ## Difficulty Levels
 
+We rank the questions by three levels of difficulty:
+
+- **[E]asy** - fundamental, everyone should know.
+- **[M]edium** - people who understand a concept beyond just the definition should know.
+- **[H]ard** - people with experience should know.
+
 ### Beginner (0-2 years experience)
 - Basic ML concepts and algorithms
 - Simple mathematical problems
