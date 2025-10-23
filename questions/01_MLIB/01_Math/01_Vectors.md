@@ -496,7 +496,7 @@ $$\text{dim}(\text{span}\{v_1, v_2, \ldots, v_n\}) = \text{rank}([v_1, v_2, \ldo
    - **Problem**: Not differentiable, so we use $L_1$ as a convex relaxation
    - **Why important**: Sparse models are easier to interpret and faster to compute
 
-   **$L_1$ norm (Lasso regularization)**: $||x||_1 = \sum_{i=1}^n |x_i|$
+   **$L_1$ norm (Lasso regularization)**: $`||x||_1 = \sum_{i=1}^n |x_i|`$
    - **Intuition**: "What's the total absolute value of all features?"
    - **ML Application**: L1 regularization $\min \text{loss} + \lambda ||w||_1$ encourages sparsity
    - **Example**: If $x = [2, -3, 0, 1]$, then $||x||_1 = 2 + 3 + 0 + 1 = 6$
