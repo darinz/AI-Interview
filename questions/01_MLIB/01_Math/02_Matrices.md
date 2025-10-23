@@ -82,7 +82,7 @@ For a square matrix $A$, the inverse $A^{-1}$ satisfies:
 - Verification: $`AA^{-1} = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}\begin{bmatrix} 1 & -1 \\ -1 & 2 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}`$ ✓
 
 **Example 2: Non-invertible Matrix**
-- $A = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$
+- $`A = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}`$
 - $\det(A) = 1(4) - 2(2) = 0$ ✗
 - Second row is 2× first row (linearly dependent)
 - No inverse exists
