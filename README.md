@@ -12,7 +12,7 @@ Whether you're gearing up for a big tech interview, refining your skills, or exp
 
 | Repository | Description |
 |------------|-------------|
-| **AIMLDS-Interview** | Comprehensive AI/ML/Data Science interview prep with algorithms, statistics, case studies, and hands-on coding challenges |
+| **AI-Interview** | Comprehensive AI/ML/Data Science interview prep with algorithms, statistics, case studies, and hands-on coding challenges |
 | **Behavioral-Interview** | STAR method, leadership scenarios, conflict resolution, and soft skills preparation for behavioral interviews |
 | **Coding-Interview** | Data structures, algorithms, and technical coding challenges with solutions in multiple programming languages |
 | **Systems-Interview** | System design, distributed systems, scalability, and infrastructure interview preparation with real-world scenarios |
