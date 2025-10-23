@@ -43,7 +43,7 @@ This repository is a comprehensive, curated collection of:
 | Resource | Description |
 |----------|-------------|
 | [`/questions`](./questions/) | Curated interview questions and answers |
-| [`/reference`](./topics/) | Reference material for core concept |
+| [`/reference`](./topics/) | Reference material for core concepts |
 | [`/CONTRIBUTING.md`](./CONTRIBUTING.md) | Best practices and guidelines for contributing |
 
 ---
