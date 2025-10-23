@@ -1,5 +1,5 @@
 
-## 1. Dot product
+1. Dot product
 
     i. [E] What's the geometric interpretation of the dot product of two vectors?
     
@@ -30,7 +30,7 @@
     - **Feature alignment**: In contrastive learning, we align positive pairs by maximizing their dot product
     - **Attention mechanisms**: The optimal attention direction aligns with the query vector
 
-## 2. Outer product
+2. Outer product
    
    i. [E] Given two vectors $a = [3, 2, 1]$ and $b = [-1, 0, 1]$. Calculate the outer product $a^T b$?
    
@@ -48,7 +48,7 @@
    - **Covariance estimation**: For PCA, we compute $\frac{1}{n}XX^T$ (outer product of data matrix with itself)
    - **Word embeddings**: In NLP, outer products model word co-occurrence patterns
 
-## 3. [E] What does it mean for two vectors to be linearly independent?
+3. [E] What does it mean for two vectors to be linearly independent?
 
 **Solution:** Linear independence is crucial in ML for understanding feature relationships and model capacity:
 
