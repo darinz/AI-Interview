@@ -79,7 +79,7 @@ For a square matrix $A$, the inverse $A^{-1}$ satisfies:
 - $`A = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}`$
 - $\det(A) = 2(1) - 1(1) = 1 \neq 0$ ✓
 - $`A^{-1} = \begin{bmatrix} 1 & -1 \\ -1 & 2 \end{bmatrix}`$
-- Verification: $AA^{-1} = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}\begin{bmatrix} 1 & -1 \\ -1 & 2 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$ ✓
+- Verification: $`AA^{-1} = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}\begin{bmatrix} 1 & -1 \\ -1 & 2 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}`$ ✓
 
 **Example 2: Non-invertible Matrix**
 - $A = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$
