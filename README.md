@@ -52,8 +52,8 @@ This repository is a comprehensive, curated collection of:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/darinz/AIMLDS-Interview.git
-cd AIMLDS-Interview
+git clone https://github.com/darinz/AI-Interview.git
+cd AI-Interview
 ```
 
 ### 2. Explore Topics
