@@ -504,7 +504,7 @@ $$\text{dim}(\text{span}\{v_1, v_2, \ldots, v_n\}) = \text{rank}([v_1, v_2, \ldo
    - **Robust to outliers**: Less sensitive than $L_2$ to extreme values
    - **Feature selection**: Automatically selects important features by zeroing others
 
-   **$L_2$ norm (Ridge regularization)**: $||x||_2 = \sqrt{\sum_{i=1}^n x_i^2}$
+   **$L_2$ norm (Ridge regularization)**: $`||x||_2 = \sqrt{\sum_{i=1}^n x_i^2}`$
    - **Intuition**: "What's the Euclidean distance from origin?" (Pythagorean theorem)
    - **ML Application**: L2 regularization $\min \text{loss} + \lambda ||w||_2^2$ prevents overfitting
    - **Example**: If $x = [3, 4]$, then $||x||_2 = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = 5$
