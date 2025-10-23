@@ -76,7 +76,7 @@ For a square matrix $A$, the inverse $A^{-1}$ satisfies:
 **Step-by-Step Examples:**
 
 **Example 1: Invertible Matrix**
-- $A = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}$
+- $`A = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}`$
 - $\det(A) = 2(1) - 1(1) = 1 \neq 0$ ✓
 - $A^{-1} = \begin{bmatrix} 1 & -1 \\ -1 & 2 \end{bmatrix}$
 - Verification: $AA^{-1} = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}\begin{bmatrix} 1 & -1 \\ -1 & 2 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$ ✓
@@ -403,7 +403,7 @@ $$
 $$
 
    Without explicitly using the equation for calculating determinants, what can we say about this matrix's determinant?
-   
+
    **Hint:** Rely on a property of this matrix to determine its determinant.
 
 **Solution:** We can determine the determinant by analyzing the linear dependence of the rows:
