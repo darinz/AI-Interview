@@ -512,7 +512,7 @@ $$\text{dim}(\text{span}\{v_1, v_2, \ldots, v_n\}) = \text{rank}([v_1, v_2, \ldo
    - **Distance metrics**: Euclidean distance for clustering, similarity
    - **Geometric interpretation**: Length of the vector in Euclidean space
 
-   **$L_{\infty}$ norm (Max pooling)**: $||x||_{\infty} = \max_{i} |x_i|$
+   **$L_{\infty}$ norm (Max pooling)**: $`||x||_{\infty} = \max_{i} |x_i|`$
    - **Intuition**: "What's the largest absolute value among all features?"
    - **ML Application**: Max pooling in CNNs captures strongest activation
    - **Example**: If $x = [2, -5, 1, 3]$, then $||x||_{\infty} = \max(2, 5, 1, 3) = 5$
