@@ -672,7 +672,9 @@ When $A$ has more columns than rows, we have more unknowns than equations, creat
 **Key Insight**: The pseudoinverse provides the "best" solution to linear systems even when the matrix is singular, making it essential for handling real-world ML problems with redundant or collinear features.
 
 9. Derivatives are the backbone of gradient descent.
+
    i. [E] What does a derivative represent?
+
    ii. [M] What's the difference between a derivative, gradient, and Jacobian?
 
 10. [H] Say we have the weights $w \in \mathbb{R}^{d \times m}$ and a mini-batch $x$ of $n$ elements, each element is of the shape $1 \times d$ so that $x \in \mathbb{R}^{n \times d}$. We have the output $y = f(x; w) = xw$. What is the dimension of the Jacobian $\frac{\partial y}{\partial x}$?
