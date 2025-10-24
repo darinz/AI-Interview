@@ -646,7 +646,7 @@ When $A$ has more columns than rows, we have more unknowns than equations, creat
 - $A = U\Sigma V^T$ where $`\Sigma = \begin{bmatrix} \sqrt{10} & 0 \\ 0 & 0 \end{bmatrix}`$
 
 **Step 2: Compute $\Sigma^+$**
-- $\Sigma^+ = \begin{bmatrix} 1/\sqrt{10} & 0 \\ 0 & 0 \end{bmatrix}$
+- $`\Sigma^+ = \begin{bmatrix} 1/\sqrt{10} & 0 \\ 0 & 0 \end{bmatrix}`$
 
 **Step 3: Compute pseudoinverse**
 - $A^+ = V\Sigma^+U^T$
