@@ -547,7 +547,9 @@ Question 7. [M] What's the difference between the covariance matrix $A^T A$ and 
 **Key Insight**: The choice between $A^T A$ and $A A^T$ depends on whether you're analyzing features or samples, and the relative dimensions of your data. Both matrices contain the same information but in different forms, making them suitable for different ML tasks.
 
 Question 8. Given $A \in \mathbb{R}^{n \times m}$ and $b \in \mathbb{R}^n$
+
    i. [M] Find $x$ such that: $Ax = b$.
+
    ii. [E] When does this have a unique solution?
    iii. [M] Why is it that when $A$ has more columns than rows, $Ax = b$ has multiple solutions?
    iv. [M] Given a matrix $A$ with no inverse. How would you solve the equation $Ax = b$? What is the pseudoinverse and how to calculate it?
