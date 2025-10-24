@@ -643,7 +643,7 @@ When $A$ has more columns than rows, we have more unknowns than equations, creat
 **Given**: $`A = \begin{bmatrix} 1 & 2 \\ 1 & 2 \end{bmatrix}`$ (singular matrix)
 
 **Step 1: SVD decomposition**
-- $A = U\Sigma V^T$ where $\Sigma = \begin{bmatrix} \sqrt{10} & 0 \\ 0 & 0 \end{bmatrix}$
+- $A = U\Sigma V^T$ where $`\Sigma = \begin{bmatrix} \sqrt{10} & 0 \\ 0 & 0 \end{bmatrix}`$
 
 **Step 2: Compute $\Sigma^+$**
 - $\Sigma^+ = \begin{bmatrix} 1/\sqrt{10} & 0 \\ 0 & 0 \end{bmatrix}$
