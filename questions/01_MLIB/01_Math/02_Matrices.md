@@ -252,7 +252,7 @@ Think of the determinant as measuring volume. If you stretch one dimension by a 
 - $\det(A) = 2(4) - 3(1) = 8 - 3 = 5$
 
 **Multiply first row by $t = 3$:**
-- $B = \begin{bmatrix} 6 & 9 \\ 1 & 4 \end{bmatrix}$
+- $`B = \begin{bmatrix} 6 & 9 \\ 1 & 4 \end{bmatrix}`$
 - $\det(B) = 6(4) - 9(1) = 24 - 9 = 15$
 - **Verification**: $15 = 3 \times 5 = t \times \det(A)$ ✓
 
