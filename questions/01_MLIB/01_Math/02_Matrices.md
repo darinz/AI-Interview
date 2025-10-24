@@ -486,7 +486,7 @@ Question 7. [M] What's the difference between the covariance matrix $A^T A$ and 
 
 **Step-by-Step Examples:**
 
-**Given matrix**: $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{bmatrix}$ (3 samples, 2 features)
+**Given matrix**: $`A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{bmatrix}`$ (3 samples, 2 features)
 
 **Covariance Matrix $A^T A$:**
 - $A^T = \begin{bmatrix} 1 & 3 & 5 \\ 2 & 4 & 6 \end{bmatrix}$
