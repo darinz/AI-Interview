@@ -248,7 +248,7 @@ Think of the determinant as measuring volume. If you stretch one dimension by a 
 **Concrete Example:**
 
 **Original matrix:**
-- $A = \begin{bmatrix} 2 & 3 \\ 1 & 4 \end{bmatrix}$
+- $`A = \begin{bmatrix} 2 & 3 \\ 1 & 4 \end{bmatrix}`$
 - $\det(A) = 2(4) - 3(1) = 8 - 3 = 5$
 
 **Multiply first row by $t = 3$:**
