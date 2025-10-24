@@ -179,7 +179,7 @@ Think of the determinant as a "scaling factor" that tells you how much a matrix 
 - **Interpretation**: Rotation preserves area and orientation
 
 **Example 3: Singular Matrix**
-- $A = \begin{bmatrix} 2 & 4 \\ 1 & 2 \end{bmatrix}$
+- $`A = \begin{bmatrix} 2 & 4 \\ 1 & 2 \end{bmatrix}`$
 - $\det(A) = 2(2) - 4(1) = 0$
 - **Interpretation**: Collapses 2D space to 1D line
 
