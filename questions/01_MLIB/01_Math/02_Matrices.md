@@ -640,7 +640,7 @@ When $A$ has more columns than rows, we have more unknowns than equations, creat
 
 **Step-by-Step Example:**
 
-**Given**: $A = \begin{bmatrix} 1 & 2 \\ 1 & 2 \end{bmatrix}$ (singular matrix)
+**Given**: $`A = \begin{bmatrix} 1 & 2 \\ 1 & 2 \end{bmatrix}`$ (singular matrix)
 
 **Step 1: SVD decomposition**
 - $A = U\Sigma V^T$ where $\Sigma = \begin{bmatrix} \sqrt{10} & 0 \\ 0 & 0 \end{bmatrix}$
