@@ -169,7 +169,7 @@ Think of the determinant as a "scaling factor" that tells you how much a matrix 
 **Step-by-Step Examples:**
 
 **Example 1: 2×2 Matrix**
-- $A = \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix}$
+- $`A = \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix}`$
 - $\det(A) = 3(2) - 1(0) = 6$
 - **Interpretation**: Area is scaled by factor of 6, orientation preserved
 
