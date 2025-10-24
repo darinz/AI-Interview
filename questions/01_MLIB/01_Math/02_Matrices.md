@@ -174,7 +174,7 @@ Think of the determinant as a "scaling factor" that tells you how much a matrix 
 - **Interpretation**: Area is scaled by factor of 6, orientation preserved
 
 **Example 2: Rotation Matrix**
-- $R = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}$
+- $`R = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}`$
 - $\det(R) = \cos^2\theta + \sin^2\theta = 1$
 - **Interpretation**: Rotation preserves area and orientation
 
