@@ -240,7 +240,7 @@ Think of the determinant as measuring volume. If you stretch one dimension by a 
 - $`A = \begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{n1} & a_{n2} & \cdots & a_{nn} \end{bmatrix}`$
 
 **Step 2: Multiply first row by $t$**
-- $B = \begin{bmatrix} ta_{11} & ta_{12} & \cdots & ta_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{n1} & a_{n2} & \cdots & a_{nn} \end{bmatrix}$
+- $`B = \begin{bmatrix} ta_{11} & ta_{12} & \cdots & ta_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{n1} & a_{n2} & \cdots & a_{nn} \end{bmatrix}`$
 
 **Step 3: Use determinant properties**
 - $\det(B) = t \cdot \det(A)$ (by linearity in rows)
