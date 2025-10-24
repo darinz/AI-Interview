@@ -553,6 +553,7 @@ Question 8. Given $A \in \mathbb{R}^{n \times m}$ and $b \in \mathbb{R}^n$
    ii. [E] When does this have a unique solution?
  
    iii. [M] Why is it that when $A$ has more columns than rows, $Ax = b$ has multiple solutions?
+
    iv. [M] Given a matrix $A$ with no inverse. How would you solve the equation $Ax = b$? What is the pseudoinverse and how to calculate it?
 
 **Solution:**
