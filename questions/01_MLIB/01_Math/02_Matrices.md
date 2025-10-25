@@ -906,7 +906,7 @@ $$\frac{\partial y}{\partial x} = \begin{bmatrix}
 
 Question 11. [H] Given a very large symmetric matrix $A$ that doesn't fit in memory, say $A \in \mathbb{R}^{1M \times 1M}$ and a function $f$ that can quickly compute $f(x) = Ax$ for $x \in \mathbb{R}^{1M}$. Find the unit vector $x$ such that $x^T Ax$ is minimal.
     
-    **Hint:** Can you frame it as an optimization problem and use gradient descent to find an approximate solution?
+**Hint:** Can you frame it as an optimization problem and use gradient descent to find an approximate solution?
 
 **Solution:** This is a classic optimization problem that appears in many ML contexts, from finding the smallest eigenvalue to principal component analysis.
 
