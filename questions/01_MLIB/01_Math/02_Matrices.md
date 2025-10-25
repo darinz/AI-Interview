@@ -745,7 +745,7 @@ $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 
 **2. Gradient (Multivariate):**
 - **Function**: $f: \mathbb{R}^n \to \mathbb{R}$
-- **Gradient**: $\nabla f = \begin{bmatrix} \frac{\partial f}{\partial x_1} \\ \frac{\partial f}{\partial x_2} \\ \vdots \\ \frac{\partial f}{\partial x_n} \end{bmatrix}$ (vector)
+- **Gradient**: $`\nabla f = \begin{bmatrix} \frac{\partial f}{\partial x_1} \\ \frac{\partial f}{\partial x_2} \\ \vdots \\ \frac{\partial f}{\partial x_n} \end{bmatrix}`$ (vector)
 - **Example**: $f(x,y) = x^2 + y^2$, $\nabla f = \begin{bmatrix} 2x \\ 2y \end{bmatrix}$
 
 **3. Jacobian (Vector-valued function):**
