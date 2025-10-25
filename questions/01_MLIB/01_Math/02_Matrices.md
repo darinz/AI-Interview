@@ -762,7 +762,7 @@ $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 **Example 2: Jacobian**
 - **Function**: $`F(x,y) = \begin{bmatrix} x^2 + y \\ x + y^2 \end{bmatrix}`$
 - **Jacobian**: $`J_F = \begin{bmatrix} 2x & 1 \\ 1 & 2y \end{bmatrix}`$
-- **At point (1,2)**: $J_F = \begin{bmatrix} 2 & 1 \\ 1 & 4 \end{bmatrix}$
+- **At point (1,2)**: $`J_F = \begin{bmatrix} 2 & 1 \\ 1 & 4 \end{bmatrix}`$
 
 **ML Applications:**
 
