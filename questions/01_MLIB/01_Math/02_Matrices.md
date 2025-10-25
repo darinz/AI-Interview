@@ -768,7 +768,7 @@ $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 
 **1. Gradient Descent:**
 - **Loss function**: $L(\theta_1, \theta_2, \ldots, \theta_n)$
-- **Gradient**: $\nabla L = \begin{bmatrix} \frac{\partial L}{\partial \theta_1} \\ \frac{\partial L}{\partial \theta_2} \\ \vdots \\ \frac{\partial L}{\partial \theta_n} \end{bmatrix}$
+- **Gradient**: $`\nabla L = \begin{bmatrix} \frac{\partial L}{\partial \theta_1} \\ \frac{\partial L}{\partial \theta_2} \\ \vdots \\ \frac{\partial L}{\partial \theta_n} \end{bmatrix}`$
 - **Update**: $\theta_{new} = \theta_{old} - \alpha \nabla L$
 
 **2. Neural Networks:**
