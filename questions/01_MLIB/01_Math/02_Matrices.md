@@ -853,6 +853,7 @@ The Jacobian tells us how each output element changes with respect to each input
 - **Output**: $`y = xw = \begin{bmatrix} y_{11} & y_{12} \\ y_{21} & y_{22} \end{bmatrix}`$
 
 **Jacobian structure:**
+
 $$\frac{\partial y}{\partial x} = \begin{bmatrix} 
 \frac{\partial y_{11}}{\partial x_{11}} & \frac{\partial y_{11}}{\partial x_{12}} & \frac{\partial y_{11}}{\partial x_{13}} & 0 & 0 & 0 \\
 \frac{\partial y_{12}}{\partial x_{11}} & \frac{\partial y_{12}}{\partial x_{12}} & \frac{\partial y_{12}}{\partial x_{13}} & 0 & 0 & 0 \\
