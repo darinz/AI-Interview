@@ -620,7 +620,7 @@ When $A$ has more columns than rows, we have more unknowns than equations, creat
 - **Regularization**: L1/L2 regularization to select unique solution
 - **Feature selection**: Choose sparsest solution
 
-**iv. [M] Pseudoinverse and solving singular systems**
+**iv. [M] Pseudoinverse and solving singular systems** [M] Given a matrix A with no inverse. How would you solve the equation Ax=b? What is the pseudoinverse and how to calculate it?
 
 **Problem**: When $A$ has no inverse, we need the pseudoinverse.
 
