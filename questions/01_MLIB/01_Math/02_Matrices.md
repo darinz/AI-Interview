@@ -756,7 +756,7 @@ $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 
 **Example 1: Gradient**
 - **Function**: $f(x,y,z) = x^2 + 2y^2 + 3z^2$
-- **Gradient**: $\nabla f = \begin{bmatrix} 2x \\ 4y \\ 6z \end{bmatrix}$
+- **Gradient**: $`\nabla f = \begin{bmatrix} 2x \\ 4y \\ 6z \end{bmatrix}`$
 - **At point (1,1,1)**: $\nabla f = \begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix}$
 
 **Example 2: Jacobian**
