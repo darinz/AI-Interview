@@ -848,7 +848,7 @@ The Jacobian tells us how each output element changes with respect to each input
 **Concrete Example:**
 
 **Given**: $n = 2, d = 3, m = 2$
-- **Input**: $x = \begin{bmatrix} x_{11} & x_{12} & x_{13} \\ x_{21} & x_{22} & x_{23} \end{bmatrix}$
+- **Input**: $`x = \begin{bmatrix} x_{11} & x_{12} & x_{13} \\ x_{21} & x_{22} & x_{23} \end{bmatrix}`$
 - **Weights**: $w = \begin{bmatrix} w_{11} & w_{12} \\ w_{21} & w_{22} \\ w_{31} & w_{32} \end{bmatrix}$
 - **Output**: $y = xw = \begin{bmatrix} y_{11} & y_{12} \\ y_{21} & y_{22} \end{bmatrix}$
 
