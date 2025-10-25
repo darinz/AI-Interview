@@ -675,14 +675,350 @@ When $A$ has more columns than rows, we have more unknowns than equations, creat
 
 **Key Insight**: The pseudoinverse provides the "best" solution to linear systems even when the matrix is singular, making it essential for handling real-world ML problems with redundant or collinear features.
 
-9. Derivatives are the backbone of gradient descent.
+Question 9. Derivatives are the backbone of gradient descent.
 
    i. [E] What does a derivative represent?
 
    ii. [M] What's the difference between a derivative, gradient, and Jacobian?
 
-10. [H] Say we have the weights $w \in \mathbb{R}^{d \times m}$ and a mini-batch $x$ of $n$ elements, each element is of the shape $1 \times d$ so that $x \in \mathbb{R}^{n \times d}$. We have the output $y = f(x; w) = xw$. What is the dimension of the Jacobian $\frac{\partial y}{\partial x}$?
+**Solution:**
 
-11. [H] Given a very large symmetric matrix $A$ that doesn't fit in memory, say $A \in \mathbb{R}^{1M \times 1M}$ and a function $f$ that can quickly compute $f(x) = Ax$ for $x \in \mathbb{R}^{1M}$. Find the unit vector $x$ such that $x^T Ax$ is minimal.
+**i. [E] What does a derivative represent?**
+
+**Intuitive Understanding:**
+Think of a derivative as the "instantaneous rate of change" - it tells you how fast something is changing at a specific point. In ML, derivatives tell us how the loss function changes when we tweak our model parameters.
+
+**Mathematical Definition:**
+For a function $f(x)$, the derivative at point $x$ is:
+$$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
+
+**Geometric Interpretation:**
+- **Slope of tangent line**: The derivative is the slope of the tangent line at that point
+- **Steepness**: Large derivative = steep function, small derivative = flat function
+- **Direction**: Positive derivative = increasing, negative derivative = decreasing
+
+**Step-by-Step Example:**
+
+**Function**: $f(x) = x^2$
+**Derivative**: $f'(x) = 2x$
+
+**At specific points:**
+- $f'(0) = 0$: Flat at the minimum
+- $f'(1) = 2$: Steep upward slope
+- $f'(-1) = -2$: Steep downward slope
+
+**ML Applications:**
+
+**1. Gradient Descent:**
+- **Loss function**: $L(\theta)$ where $\theta$ are model parameters
+- **Derivative**: $\frac{\partial L}{\partial \theta}$ tells us how to update parameters
+- **Update rule**: $\theta_{new} = \theta_{old} - \alpha \frac{\partial L}{\partial \theta}$
+
+**2. Optimization:**
+- **Finding minima**: Set derivative to zero: $f'(x) = 0$
+- **Convergence**: Small derivatives indicate we're near the minimum
+- **Learning rate**: How big steps to take based on derivative magnitude
+
+**3. Neural Networks:**
+- **Backpropagation**: Derivatives flow backward through the network
+- **Chain rule**: $\frac{\partial L}{\partial w} = \frac{\partial L}{\partial z} \frac{\partial z}{\partial w}$
+- **Vanishing gradients**: Small derivatives can cause slow learning
+
+**4. Feature Engineering:**
+- **Feature importance**: Large derivatives indicate important features
+- **Sensitivity analysis**: How sensitive is the model to input changes
+- **Adversarial examples**: Understanding how small input changes affect output
+
+**ii. [M] What's the difference between a derivative, gradient, and Jacobian?**
+
+**Intuitive Understanding:**
+- **Derivative**: Rate of change in one direction (1D)
+- **Gradient**: Rate of change in all directions (vector of derivatives)
+- **Jacobian**: How multiple outputs change with multiple inputs (matrix of derivatives)
+
+**Mathematical Definitions:**
+
+**1. Derivative (1D):**
+- **Function**: $f: \mathbb{R} \to \mathbb{R}$
+- **Derivative**: $f'(x) = \frac{df}{dx}$ (scalar)
+- **Example**: $f(x) = x^2$, $f'(x) = 2x$
+
+**2. Gradient (Multivariate):**
+- **Function**: $f: \mathbb{R}^n \to \mathbb{R}$
+- **Gradient**: $\nabla f = \begin{bmatrix} \frac{\partial f}{\partial x_1} \\ \frac{\partial f}{\partial x_2} \\ \vdots \\ \frac{\partial f}{\partial x_n} \end{bmatrix}$ (vector)
+- **Example**: $f(x,y) = x^2 + y^2$, $\nabla f = \begin{bmatrix} 2x \\ 2y \end{bmatrix}$
+
+**3. Jacobian (Vector-valued function):**
+- **Function**: $F: \mathbb{R}^n \to \mathbb{R}^m$
+- **Jacobian**: $J_F = \begin{bmatrix} \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \cdots & \frac{\partial f_1}{\partial x_n} \\ \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & \cdots & \frac{\partial f_2}{\partial x_n} \\ \vdots & \vdots & \ddots & \vdots \\ \frac{\partial f_m}{\partial x_1} & \frac{\partial f_m}{\partial x_2} & \cdots & \frac{\partial f_m}{\partial x_n} \end{bmatrix}$ (matrix)
+
+**Step-by-Step Examples:**
+
+**Example 1: Gradient**
+- **Function**: $f(x,y,z) = x^2 + 2y^2 + 3z^2$
+- **Gradient**: $\nabla f = \begin{bmatrix} 2x \\ 4y \\ 6z \end{bmatrix}$
+- **At point (1,1,1)**: $\nabla f = \begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix}$
+
+**Example 2: Jacobian**
+- **Function**: $F(x,y) = \begin{bmatrix} x^2 + y \\ x + y^2 \end{bmatrix}$
+- **Jacobian**: $J_F = \begin{bmatrix} 2x & 1 \\ 1 & 2y \end{bmatrix}$
+- **At point (1,2)**: $J_F = \begin{bmatrix} 2 & 1 \\ 1 & 4 \end{bmatrix}$
+
+**ML Applications:**
+
+**1. Gradient Descent:**
+- **Loss function**: $L(\theta_1, \theta_2, \ldots, \theta_n)$
+- **Gradient**: $\nabla L = \begin{bmatrix} \frac{\partial L}{\partial \theta_1} \\ \frac{\partial L}{\partial \theta_2} \\ \vdots \\ \frac{\partial L}{\partial \theta_n} \end{bmatrix}$
+- **Update**: $\theta_{new} = \theta_{old} - \alpha \nabla L$
+
+**2. Neural Networks:**
+- **Forward pass**: $y = f(x; \theta)$
+- **Backward pass**: $\frac{\partial L}{\partial \theta}$ (gradient)
+- **Chain rule**: $\frac{\partial L}{\partial w} = \frac{\partial L}{\partial y} \frac{\partial y}{\partial w}$
+
+**3. Jacobian in Neural Networks:**
+- **Multiple outputs**: $y = [y_1, y_2, \ldots, y_m]$
+- **Jacobian**: $J_{ij} = \frac{\partial y_i}{\partial x_j}$
+- **Applications**: Sensitivity analysis, adversarial attacks
+
+**4. Optimization Algorithms:**
+- **Adam**: Uses gradient and second moments
+- **Newton's method**: Uses Jacobian and Hessian
+- **BFGS**: Approximates inverse Hessian
+
+**Computational Considerations:**
+
+**Gradient Computation:**
+- **Analytical**: Exact derivatives (preferred when possible)
+- **Numerical**: Finite differences (for debugging)
+- **Automatic differentiation**: Backpropagation (efficient for neural networks)
+
+**Memory Usage:**
+- **Gradient**: $O(n)$ where $n$ is number of parameters
+- **Jacobian**: $O(m \times n)$ where $m$ is output dimension, $n$ is input dimension
+- **Hessian**: $O(n^2)$ (second derivatives)
+
+**Numerical Stability:**
+- **Vanishing gradients**: Small derivatives cause slow learning
+- **Exploding gradients**: Large derivatives cause instability
+- **Gradient clipping**: Prevents exploding gradients
+
+**Key Insight**: Derivatives are the foundation of all optimization in ML. The gradient tells us the direction of steepest ascent, while the Jacobian captures how multiple outputs change with multiple inputs. Understanding these concepts is crucial for implementing and debugging ML algorithms.
+
+Question 10. [H] Say we have the weights $w \in \mathbb{R}^{d \times m}$ and a mini-batch $x$ of $n$ elements, each element is of the shape $1 \times d$ so that $x \in \mathbb{R}^{n \times d}$. We have the output $y = f(x; w) = xw$. What is the dimension of the Jacobian $\frac{\partial y}{\partial x}$?
+
+**Solution:** This is a classic question about Jacobian dimensions in neural networks, specifically for linear layers.
+
+**Intuitive Understanding:**
+The Jacobian tells us how each output element changes with respect to each input element. We need to figure out the dimensions of this "change matrix."
+
+**Step-by-Step Analysis:**
+
+**Step 1: Understand the dimensions**
+- **Input**: $x \in \mathbb{R}^{n \times d}$ (n samples, d features each)
+- **Weights**: $w \in \mathbb{R}^{d \times m}$ (d input features, m output features)
+- **Output**: $y = xw \in \mathbb{R}^{n \times m}$ (n samples, m output features each)
+
+**Step 2: Set up the Jacobian**
+- **Function**: $f: \mathbb{R}^{n \times d} \to \mathbb{R}^{n \times m}$
+- **Jacobian**: $\frac{\partial y}{\partial x}$ where $y = xw$
+
+**Step 3: Calculate dimensions**
+- **Input dimension**: $n \times d$ (total of $nd$ input elements)
+- **Output dimension**: $n \times m$ (total of $nm$ output elements)
+- **Jacobian dimension**: $(nm) \times (nd)$
+
+**Step 4: Verify with matrix multiplication**
+- **Element-wise**: $y_{ij} = \sum_{k=1}^d x_{ik} w_{kj}$
+- **Partial derivative**: $\frac{\partial y_{ij}}{\partial x_{kl}} = w_{lj}$ if $i = k$, else $0$
+- **Structure**: Each output element depends on $d$ input elements from the same row
+
+**Detailed Calculation:**
+
+**For each output element $y_{ij}$:**
+- $y_{ij} = x_{i1}w_{1j} + x_{i2}w_{2j} + \cdots + x_{id}w_{dj}$
+- $\frac{\partial y_{ij}}{\partial x_{ik}} = w_{kj}$ (for $k = 1, 2, \ldots, d$)
+- $\frac{\partial y_{ij}}{\partial x_{lk}} = 0$ (for $l \neq i$)
+
+**Jacobian structure:**
+- **Block diagonal**: Each sample's output only depends on that sample's input
+- **Block size**: $m \times d$ for each sample
+- **Total blocks**: $n$ blocks
+
+**Concrete Example:**
+
+**Given**: $n = 2, d = 3, m = 2$
+- **Input**: $x = \begin{bmatrix} x_{11} & x_{12} & x_{13} \\ x_{21} & x_{22} & x_{23} \end{bmatrix}$
+- **Weights**: $w = \begin{bmatrix} w_{11} & w_{12} \\ w_{21} & w_{22} \\ w_{31} & w_{32} \end{bmatrix}$
+- **Output**: $y = xw = \begin{bmatrix} y_{11} & y_{12} \\ y_{21} & y_{22} \end{bmatrix}$
+
+**Jacobian structure:**
+$$\frac{\partial y}{\partial x} = \begin{bmatrix} 
+\frac{\partial y_{11}}{\partial x_{11}} & \frac{\partial y_{11}}{\partial x_{12}} & \frac{\partial y_{11}}{\partial x_{13}} & 0 & 0 & 0 \\
+\frac{\partial y_{12}}{\partial x_{11}} & \frac{\partial y_{12}}{\partial x_{12}} & \frac{\partial y_{12}}{\partial x_{13}} & 0 & 0 & 0 \\
+0 & 0 & 0 & \frac{\partial y_{21}}{\partial x_{21}} & \frac{\partial y_{21}}{\partial x_{22}} & \frac{\partial y_{21}}{\partial x_{23}} \\
+0 & 0 & 0 & \frac{\partial y_{22}}{\partial x_{21}} & \frac{\partial y_{22}}{\partial x_{22}} & \frac{\partial y_{22}}{\partial x_{23}}
+\end{bmatrix}$$
+
+**Dimensions**: $(2 \times 2) \times (2 \times 3) = 4 \times 6$
+
+**ML Applications:**
+
+**1. Backpropagation:**
+- **Gradient flow**: $\frac{\partial L}{\partial x} = \frac{\partial L}{\partial y} \frac{\partial y}{\partial x}$
+- **Memory usage**: Storing Jacobian requires $O(nm \times nd)$ memory
+- **Efficiency**: Block diagonal structure allows efficient computation
+
+**2. Neural Network Training:**
+- **Linear layers**: Most common layer type in neural networks
+- **Batch processing**: Processing multiple samples simultaneously
+- **Gradient computation**: Essential for backpropagation
+
+**3. Sensitivity Analysis:**
+- **Input sensitivity**: How sensitive is output to input changes
+- **Feature importance**: Which input features matter most
+- **Adversarial robustness**: Understanding input-output relationships
+
+**4. Optimization:**
+- **Gradient descent**: Jacobian needed for parameter updates
+- **Second-order methods**: Hessian computation requires Jacobian
+- **Regularization**: Understanding how inputs affect outputs
+
+**Computational Considerations:**
+
+**Memory Complexity:**
+- **Naive storage**: $O(nm \times nd) = O(n^2md)$
+- **Block diagonal**: Can be stored as $n$ blocks of size $m \times d$
+- **Efficient storage**: $O(nmd)$ using block structure
+
+**Computational Complexity:**
+- **Forward pass**: $O(nmd)$ for matrix multiplication
+- **Backward pass**: $O(nmd)$ for gradient computation
+- **Jacobian computation**: $O(nmd)$ using block structure
+
+**Numerical Stability:**
+- **Large dimensions**: Can cause memory issues
+- **Gradient scaling**: Large Jacobians can cause exploding gradients
+- **Batch size**: Larger batches increase memory requirements
+
+**Key Insight**: The Jacobian has dimensions $(nm) \times (nd)$, but its block diagonal structure makes it much more efficient to compute and store than a general matrix of this size. This is crucial for efficient neural network training, especially with large batch sizes.
+
+Question 11. [H] Given a very large symmetric matrix $A$ that doesn't fit in memory, say $A \in \mathbb{R}^{1M \times 1M}$ and a function $f$ that can quickly compute $f(x) = Ax$ for $x \in \mathbb{R}^{1M}$. Find the unit vector $x$ such that $x^T Ax$ is minimal.
     
     **Hint:** Can you frame it as an optimization problem and use gradient descent to find an approximate solution?
+
+**Solution:** This is a classic optimization problem that appears in many ML contexts, from finding the smallest eigenvalue to principal component analysis.
+
+**Intuitive Understanding:**
+We want to find the direction (unit vector) where the quadratic form $x^T Ax$ is smallest. This is equivalent to finding the eigenvector corresponding to the smallest eigenvalue of $A$.
+
+**Mathematical Setup:**
+
+**Optimization Problem:**
+- **Objective**: Minimize $x^T Ax$ subject to $||x||_2 = 1$
+- **Constraint**: Unit vector constraint
+- **Method**: Use gradient descent with projection
+
+**Step-by-Step Solution:**
+
+**Step 1: Set up the optimization problem**
+- **Objective function**: $f(x) = x^T Ax$
+- **Constraint**: $||x||_2 = 1$ (unit sphere)
+- **Gradient**: $\nabla f(x) = 2Ax$ (since $A$ is symmetric)
+
+**Step 2: Projected gradient descent**
+- **Update rule**: $x_{new} = x_{old} - \alpha \nabla f(x_{old})$
+- **Projection**: $x_{new} = \frac{x_{new}}{||x_{new}||_2}$ (project back to unit sphere)
+- **Learning rate**: $\alpha$ controls step size
+
+**Step 3: Algorithm implementation**
+```
+1. Initialize: x = random unit vector
+2. For iteration t = 1, 2, ...:
+   a. Compute gradient: g = 2Ax (using function f)
+   b. Update: x = x - αg
+   c. Project: x = x / ||x||_2
+   d. Check convergence: ||g||_2 < tolerance
+```
+
+**Step 4: Convergence analysis**
+- **Convergence**: Algorithm converges to eigenvector of smallest eigenvalue
+- **Rate**: Linear convergence rate depends on eigenvalue gap
+- **Stopping criterion**: Gradient norm or change in objective
+
+**Detailed Algorithm:**
+
+**Initialization:**
+- **Random unit vector**: $x_0 = \frac{\text{random vector}}{||\text{random vector}||_2}$
+- **Learning rate**: $\alpha = 0.01$ (typical starting value)
+- **Tolerance**: $\epsilon = 10^{-6}$ (convergence threshold)
+
+**Iteration:**
+- **Gradient computation**: $g = 2Ax$ (using provided function $f$)
+- **Gradient norm**: $||g||_2$ (for convergence check)
+- **Update**: $x_{new} = x - \alpha g$
+- **Projection**: $x_{new} = \frac{x_{new}}{||x_{new}||_2}$
+- **Objective**: $f_{new} = x_{new}^T A x_{new}$
+
+**Convergence Criteria:**
+- **Gradient norm**: $||g||_2 < \epsilon$
+- **Objective change**: $|f_{new} - f_{old}| < \epsilon$
+- **Maximum iterations**: Prevent infinite loops
+
+**ML Applications:**
+
+**1. Principal Component Analysis:**
+- **Smallest eigenvalue**: Corresponds to direction of least variance
+- **Dimensionality reduction**: Remove directions with least information
+- **Data compression**: Understanding data structure
+
+**2. Optimization:**
+- **Hessian analysis**: Smallest eigenvalue indicates curvature
+- **Saddle points**: Negative eigenvalues indicate instability
+- **Convergence**: Understanding optimization landscape
+
+**3. Neural Networks:**
+- **Weight matrices**: Analyzing learned representations
+- **Gradient flow**: Understanding how gradients propagate
+- **Initialization**: Ensuring proper weight initialization
+
+**4. Regularization:**
+- **L2 regularization**: Adding $\lambda I$ shifts eigenvalues
+- **Numerical stability**: Avoiding singular matrices
+- **Condition number**: Understanding matrix conditioning
+
+**Computational Considerations:**
+
+**Memory Efficiency:**
+- **Matrix-free**: Never store $A$ explicitly
+- **Function calls**: Use $f(x) = Ax$ for gradient computation
+- **Storage**: Only store current iterate $x$ and gradient $g$
+
+**Numerical Stability:**
+- **Learning rate**: Too large causes instability, too small causes slow convergence
+- **Projection**: Ensures constraint satisfaction
+- **Gradient scaling**: May need to scale gradients for stability
+
+**Convergence Rate:**
+- **Eigenvalue gap**: $\lambda_2 - \lambda_1$ affects convergence speed
+- **Condition number**: $\frac{\lambda_{max}}{\lambda_{min}}$ affects stability
+- **Acceleration**: Can use momentum or adaptive methods
+
+**Advanced Techniques:**
+
+**1. Power Iteration:**
+- **Method**: $x_{new} = \frac{Ax_{old}}{||Ax_{old}||_2}$
+- **Convergence**: To largest eigenvalue (opposite problem)
+- **Inverse iteration**: Use $(A - \mu I)^{-1}$ for specific eigenvalues
+
+**2. Lanczos Method:**
+- **Krylov subspace**: More sophisticated than gradient descent
+- **Multiple eigenvalues**: Can find several smallest eigenvalues
+- **Efficiency**: Better convergence for large matrices
+
+**3. Randomized Methods:**
+- **Random projections**: Reduce dimensionality
+- **Sampling**: Use subset of matrix elements
+- **Approximation**: Trade accuracy for speed
+
+**Key Insight**: This problem demonstrates how to handle large-scale optimization when the matrix doesn't fit in memory. The key is using the matrix-vector product function efficiently and ensuring the unit vector constraint is maintained through projection. This approach is fundamental in many ML algorithms that work with large matrices.
