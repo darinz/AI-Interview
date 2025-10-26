@@ -160,13 +160,17 @@ $$A = \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix}$$
 **Result**: Unique eigendecomposition
 
 **Example 2: Non-unique eigendecomposition**
+
 $$A = \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}$$
 
 **Eigenvalues**: $\lambda_1 = \lambda_2 = 2$ (repeated)
+
 **Eigenvectors**: ANY two linearly independent vectors!
+
 **Result**: Infinitely many eigendecompositions
 
 **Example 3: Partial uniqueness**
+
 $$A = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$$
 
 **Eigenvalues**: $\lambda_1 = \lambda_2 = 1$ (repeated)
