@@ -133,7 +133,7 @@ where:
 - **Distinct eigenvalues**: Each eigenvalue has exactly one eigenvector (up to scaling)
 - **Example**: $`A = \begin{bmatrix} 2 & 0 \\ 0 & 3 \end{bmatrix}`$
   - Eigenvalues: $\lambda_1 = 2, \lambda_2 = 3$
-  - Eigenvectors: $v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, v_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$
+  - Eigenvectors: $`v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, v_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}`$
   - **Unique**: No other eigenvectors possible
 
 **Step 3: Cases where eigenvectors are NOT unique:**
