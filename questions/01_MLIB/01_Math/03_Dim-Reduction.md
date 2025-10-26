@@ -138,7 +138,7 @@ where:
 
 **Step 3: Cases where eigenvectors are NOT unique:**
 - **Repeated eigenvalues**: Multiple eigenvectors possible
-- **Example**: $A = \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}$ (identity matrix)
+- **Example**: $`A = \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}`$ (identity matrix)
   - Eigenvalue: $\lambda = 2$ (repeated)
   - Eigenvectors: ANY non-zero vector is an eigenvector!
   - **Not unique**: Infinitely many choices
@@ -151,10 +151,12 @@ where:
 **Detailed Examples:**
 
 **Example 1: Unique eigendecomposition**
+
 $$A = \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix}$$
 
 **Eigenvalues**: $\lambda_1 = 3, \lambda_2 = 2$ (distinct)
-**Eigenvectors**: $v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, v_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}$
+
+**Eigenvectors**: $`v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, v_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}`$
 **Result**: Unique eigendecomposition
 
 **Example 2: Non-unique eigendecomposition**
