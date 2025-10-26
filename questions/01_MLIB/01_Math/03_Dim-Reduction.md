@@ -174,7 +174,9 @@ $$A = \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}$$
 $$A = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$$
 
 **Eigenvalues**: $\lambda_1 = \lambda_2 = 1$ (repeated)
-**Eigenvectors**: Only $v = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ (defective matrix)
+
+**Eigenvectors**: Only $`v = \begin{bmatrix} 1 \\ 0 \end{bmatrix}`$ (defective matrix)
+
 **Result**: No complete eigendecomposition possible
 
 **ML Applications and Implications:**
