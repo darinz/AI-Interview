@@ -805,7 +805,7 @@ $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 
 **Key Insight**: Derivatives are the foundation of all optimization in ML. The gradient tells us the direction of steepest ascent, while the Jacobian captures how multiple outputs change with multiple inputs. Understanding these concepts is crucial for implementing and debugging ML algorithms.
 
-Question 10. [H] Say we have the weights $w \in \mathbb{R}^{d \times m}$ and a mini-batch $x$ of $n$ elements, each element is of the shape $1 \times d$ so that $x \in \mathbb{R}^{n \times d}$. We have the output $y = f(x; w) = xw$. What is the dimension of the Jacobian $\frac{\partial y}{\partial x}$?
+## Question 10. [H] Say we have the weights $w \in \mathbb{R}^{d \times m}$ and a mini-batch $x$ of $n$ elements, each element is of the shape $1 \times d$ so that $x \in \mathbb{R}^{n \times d}$. We have the output $y = f(x; w) = xw$. What is the dimension of the Jacobian $\frac{\partial y}{\partial x}$?
 
 **Solution:** This is a classic question about Jacobian dimensions in neural networks, specifically for linear layers.
 
