@@ -152,7 +152,10 @@ where:
 
 **Example 1: Unique eigendecomposition**
 
-$$A = \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix}$$
+$$A = \begin{bmatrix} 
+3 & 1 \\ 
+0 & 2 
+\end{bmatrix}$$
 
 **Eigenvalues**: $\lambda_1 = 3, \lambda_2 = 2$ (distinct)
 
