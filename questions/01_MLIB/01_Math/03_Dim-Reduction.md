@@ -1,6 +1,6 @@
 # Dimensionality Reduction
 
-Question 1. [E] Why do we need dimensionality reduction?
+## Question 1. [E] Why do we need dimensionality reduction?
 
 **Solution:**
 
