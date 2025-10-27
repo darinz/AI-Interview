@@ -1,95 +1,95 @@
 # Vectors
 
-1. Dot product
+## 1. Dot product
 
-    Question i. [E] What's the geometric interpretation of the dot product of two vectors?
-    
-    **Solution:** The dot product is fundamental in ML and has several key interpretations:
+### Question i. [E] What's the geometric interpretation of the dot product of two vectors?
 
-    **Intuitive Understanding:**
-    Think of the dot product as measuring how much two vectors "point in the same direction." If two vectors are perfectly aligned, the dot product is large and positive. If they point in opposite directions, it's large and negative. If they're perpendicular, it's zero.
+**Solution:** The dot product is fundamental in ML and has several key interpretations:
 
-    **Mathematical Foundation:**
-    The dot product formula $a \cdot b = |a| \cdot |b| \cos(\theta)$ tells us:
-    - **$|a| \cdot |b|$**: Maximum possible value (when vectors are parallel)
-    - **$\cos(\theta)$**: How much of this maximum we actually get
-    - **$\theta$**: Angle between vectors (0° = parallel, 90° = perpendicular, 180° = opposite)
+**Intuitive Understanding:**
+Think of the dot product as measuring how much two vectors "point in the same direction." If two vectors are perfectly aligned, the dot product is large and positive. If they point in opposite directions, it's large and negative. If they're perpendicular, it's zero.
 
-    **ML Applications Explained:**
+**Mathematical Foundation:**
+The dot product formula $a \cdot b = |a| \cdot |b| \cos(\theta)$ tells us:
+- **$|a| \cdot |b|$**: Maximum possible value (when vectors are parallel)
+- **$\cos(\theta)$**: How much of this maximum we actually get
+- **$\theta$**: Angle between vectors (0° = parallel, 90° = perpendicular, 180° = opposite)
 
-    **1. Similarity Measure**: 
-    - **Intuition**: Like measuring how similar two people's preferences are
-    - **Example**: User vectors [1,0,1,0] and [1,0,0,1] have dot product 1 (somewhat similar)
-    - **ML Use**: Recommendation systems use this to find users with similar tastes
+**ML Applications Explained:**
 
-    **2. Attention Mechanisms**:
-    - **Intuition**: "How much should I pay attention to this word/feature?"
-    - **Process**: Query vector asks "what am I looking for?" Key vector says "this is what I contain"
-    - **Result**: High dot product = high attention = "this is relevant!"
+**1. Similarity Measure**: 
+- **Intuition**: Like measuring how similar two people's preferences are
+- **Example**: User vectors [1,0,1,0] and [1,0,0,1] have dot product 1 (somewhat similar)
+- **ML Use**: Recommendation systems use this to find users with similar tastes
 
-    **3. Neural Network Computations**:
-    - **Intuition**: Each neuron computes a weighted sum of inputs
-    - **Formula**: $Wx + b$ where $Wx$ is a dot product between weight vector and input vector
-    - **Example**: If weights are [0.5, -0.3, 0.8] and inputs are [1, 0, 1], result is 0.5×1 + (-0.3)×0 + 0.8×1 = 1.3
+**2. Attention Mechanisms**:
+- **Intuition**: "How much should I pay attention to this word/feature?"
+- **Process**: Query vector asks "what am I looking for?" Key vector says "this is what I contain"
+- **Result**: High dot product = high attention = "this is relevant!"
 
-    **4. Cosine Similarity**:
-    - **Why useful**: Measures direction similarity regardless of magnitude
-    - **Formula**: $\cos(\theta) = \frac{a \cdot b}{|a| \cdot |b|}$
-    - **Example**: Text similarity - "cat" and "kitten" have high cosine similarity even if one appears more frequently
+**3. Neural Network Computations**:
+- **Intuition**: Each neuron computes a weighted sum of inputs
+- **Formula**: $Wx + b$ where $Wx$ is a dot product between weight vector and input vector
+- **Example**: If weights are [0.5, -0.3, 0.8] and inputs are [1, 0, 1], result is 0.5×1 + (-0.3)×0 + 0.8×1 = 1.3
 
-    **5. Orthogonality Test**:
-    - **Intuition**: Perpendicular vectors are "completely different"
-    - **ML Use**: Feature selection - remove features that are too similar (low dot product with target)
-    
-    Question ii. [E] Given a vector $u$, find vector $v$ of unit length such that the dot product of $u$ and $v$ is maximum.
-    
-    **Solution:** This optimization problem is common in ML, particularly in:
+**4. Cosine Similarity**:
+- **Why useful**: Measures direction similarity regardless of magnitude
+- **Formula**: $\cos(\theta) = \frac{a \cdot b}{|a| \cdot |b|}$
+- **Example**: Text similarity - "cat" and "kitten" have high cosine similarity even if one appears more frequently
 
-    **Intuitive Understanding:**
-    Imagine you have a flashlight (vector $u$) and want to point it in the direction that gives maximum "light" (dot product). The answer is obvious: point it in the same direction as $u$! This is like asking "which way should I look to see the most of this object?"
+**5. Orthogonality Test**:
+- **Intuition**: Perpendicular vectors are "completely different"
+- **ML Use**: Feature selection - remove features that are too similar (low dot product with target)
 
-    **Step-by-Step Mathematical Solution:**
+Question ii. [E] Given a vector $u$, find vector $v$ of unit length such that the dot product of $u$ and $v$ is maximum.
 
-    **Step 1: Set up the problem**
-    - We want to maximize $u \cdot v$ where $|v| = 1$ (unit length constraint)
-    - The dot product formula: $u \cdot v = |u| \cdot |v| \cos(\theta) = |u| \cos(\theta)$ (since $|v| = 1$)
+**Solution:** This optimization problem is common in ML, particularly in:
 
-    **Step 2: Find the maximum**
-    - Since $|u|$ is fixed, we need to maximize $\cos(\theta)$
-    - $\cos(\theta)$ is maximized when $\theta = 0$ (cosine of 0° = 1)
-    - This means the vectors are parallel (pointing in the same direction)
+**Intuitive Understanding:**
+Imagine you have a flashlight (vector $u$) and want to point it in the direction that gives maximum "light" (dot product). The answer is obvious: point it in the same direction as $u$! This is like asking "which way should I look to see the most of this object?"
 
-    **Step 3: Find the solution**
-    - $v$ should point in the same direction as $u$
-    - To make it unit length: $v = \frac{u}{|u|}$ (divide by its length)
-    - Maximum dot product value: $u \cdot v = |u| \cdot 1 = |u|$
+**Step-by-Step Mathematical Solution:**
 
-    **Concrete Example:**
-    - If $u = [3, 4]$, then $|u| = 5$
-    - The unit vector in same direction: $v = \frac{[3,4]}{5} = [0.6, 0.8]$
-    - Maximum dot product: $[3,4] \cdot [0.6,0.8] = 3(0.6) + 4(0.8) = 1.8 + 3.2 = 5 = |u|$
+**Step 1: Set up the problem**
+- We want to maximize $u \cdot v$ where $|v| = 1$ (unit length constraint)
+- The dot product formula: $u \cdot v = |u| \cdot |v| \cos(\theta) = |u| \cos(\theta)$ (since $|v| = 1$)
 
-    **ML Applications Explained:**
+**Step 2: Find the maximum**
+- Since $|u|$ is fixed, we need to maximize $\cos(\theta)$
+- $\cos(\theta)$ is maximized when $\theta = 0$ (cosine of 0° = 1)
+- This means the vectors are parallel (pointing in the same direction)
 
-    **1. Gradient Descent:**
-    - **Problem**: Which direction should we move to increase the loss function fastest?
-    - **Solution**: Move in the direction of the gradient (steepest ascent)
-    - **Why**: The gradient points in the direction of maximum increase
+**Step 3: Find the solution**
+- $v$ should point in the same direction as $u$
+- To make it unit length: $v = \frac{u}{|u|}$ (divide by its length)
+- Maximum dot product value: $u \cdot v = |u| \cdot 1 = |u|$
 
-    **2. PCA (Principal Component Analysis):**
-    - **Problem**: Which direction captures the most variance in the data?
-    - **Solution**: The first principal component is the direction of maximum variance
-    - **Why**: We want to project data onto the direction that preserves the most information
+**Concrete Example:**
+- If $u = [3, 4]$, then $|u| = 5$
+- The unit vector in same direction: $v = \frac{[3,4]}{5} = [0.6, 0.8]$
+- Maximum dot product: $[3,4] \cdot [0.6,0.8] = 3(0.6) + 4(0.8) = 1.8 + 3.2 = 5 = |u|$
 
-    **3. Neural Network Training:**
-    - **Problem**: How should we update weights to minimize loss?
-    - **Solution**: Move in the direction opposite to the gradient (steepest descent)
-    - **Why**: The negative gradient points toward the minimum
+**ML Applications Explained:**
 
-    **4. Attention Mechanisms:**
-    - **Problem**: Which parts of the input should get the most attention?
-    - **Solution**: Query vectors that align best with key vectors get high attention
-    - **Why**: High dot product means high relevance/similarity
+**1. Gradient Descent:**
+- **Problem**: Which direction should we move to increase the loss function fastest?
+- **Solution**: Move in the direction of the gradient (steepest ascent)
+- **Why**: The gradient points in the direction of maximum increase
+
+**2. PCA (Principal Component Analysis):**
+- **Problem**: Which direction captures the most variance in the data?
+- **Solution**: The first principal component is the direction of maximum variance
+- **Why**: We want to project data onto the direction that preserves the most information
+
+**3. Neural Network Training:**
+- **Problem**: How should we update weights to minimize loss?
+- **Solution**: Move in the direction opposite to the gradient (steepest descent)
+- **Why**: The negative gradient points toward the minimum
+
+**4. Attention Mechanisms:**
+- **Problem**: Which parts of the input should get the most attention?
+- **Solution**: Query vectors that align best with key vectors get high attention
+- **Why**: High dot product means high relevance/similarity
 
 2. Outer product
    
