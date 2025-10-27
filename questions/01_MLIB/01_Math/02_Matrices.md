@@ -224,7 +224,7 @@ Think of the determinant as a "scaling factor" that tells you how much a matrix 
 
 **Key Insight**: The determinant is crucial in ML for understanding model behavior, ensuring numerical stability, and analyzing the geometry of transformations. It's particularly important in optimization, where singular matrices can cause training instability.
 
-Question 4. [E] What happens to the determinant of a matrix if we multiply one of its rows by a scalar $t \in \mathbb{R}$?
+## Question 4. [E] What happens to the determinant of a matrix if we multiply one of its rows by a scalar $t \in \mathbb{R}$?
 
 **Solution:** Multiplying a row by a scalar $t$ multiplies the determinant by $t$:
 
