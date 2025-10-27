@@ -462,7 +462,7 @@ Since Row 3 = 2×Row 1 + (-1)×Row 2, the rows are linearly dependent.
 
 **Key Insight**: This matrix is singular (determinant = 0) because its rows are linearly dependent. In ML, this indicates redundant information or potential numerical issues that need to be addressed through feature selection or regularization.
 
-Question 7. [M] What's the difference between the covariance matrix $A^T A$ and the Gram matrix $A A^T$?
+## Question 7. [M] What's the difference between the covariance matrix $A^T A$ and the Gram matrix $A A^T$?
 
 **Solution:** These matrices capture different relationships and have distinct properties in ML:
 
@@ -546,7 +546,7 @@ Question 7. [M] What's the difference between the covariance matrix $A^T A$ and 
 
 **Key Insight**: The choice between $A^T A$ and $A A^T$ depends on whether you're analyzing features or samples, and the relative dimensions of your data. Both matrices contain the same information but in different forms, making them suitable for different ML tasks.
 
-Question 8. Given $A \in \mathbb{R}^{n \times m}$ and $b \in \mathbb{R}^n$
+## Question 8. Given $A \in \mathbb{R}^{n \times m}$ and $b \in \mathbb{R}^n$
 
    i. [M] Find $x$ such that: $Ax = b$.
 
@@ -675,7 +675,7 @@ When $A$ has more columns than rows, we have more unknowns than equations, creat
 
 **Key Insight**: The pseudoinverse provides the "best" solution to linear systems even when the matrix is singular, making it essential for handling real-world ML problems with redundant or collinear features.
 
-Question 9. Derivatives are the backbone of gradient descent.
+## Question 9. Derivatives are the backbone of gradient descent.
 
    i. [E] What does a derivative represent?
 
