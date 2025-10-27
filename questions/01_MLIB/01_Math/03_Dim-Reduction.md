@@ -170,7 +170,9 @@ $$\det\begin{bmatrix}
 **Eigenvalues**: $\lambda_1 = 3, \lambda_2 = 2$ (distinct)
 
 **Step 2: Find eigenvector for $\lambda_1 = 3$**
+
 Solve $(A - 3I)v_1 = 0$:
+
 $$\begin{bmatrix} 0 & 1 \\ 0 & -1 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$$
 From first row: $x_2 = 0$
 From second row: $-x_2 = 0$ (redundant)
