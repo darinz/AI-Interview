@@ -286,6 +286,7 @@ $$\det\begin{bmatrix}
 1-\lambda & 1 \\ 
 0 & 1-\lambda 
 \end{bmatrix} = (1-\lambda)^2 = 0$$
+
 **Eigenvalues**: $\lambda_1 = \lambda_2 = 1$ (repeated)
 
 **Step 2: Find eigenvectors for $\lambda = 1$**
