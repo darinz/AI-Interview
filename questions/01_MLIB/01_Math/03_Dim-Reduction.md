@@ -164,7 +164,10 @@ $$A = \begin{bmatrix}
 
 **Example 2: Non-unique eigendecomposition**
 
-$$A = \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}$$
+$$A = \begin{bmatrix} 
+2 & 0 \\ 
+0 & 2 
+\end{bmatrix}$$
 
 **Eigenvalues**: $\lambda_1 = \lambda_2 = 2$ (repeated)
 
