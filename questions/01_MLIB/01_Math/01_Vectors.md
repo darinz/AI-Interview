@@ -93,7 +93,7 @@ Imagine you have a flashlight (vector $u$) and want to point it in the direction
 
 ## 2. Outer product
    
-Question i. [E] Given two vectors $a = [3, 2, 1]$ and $b = [-1, 0, 1]$. Calculate the outer product $a^T b$?
+### Question i. [E] Given two vectors $a = [3, 2, 1]$ and $b = [-1, 0, 1]$. Calculate the outer product $a^T b$?
 
 **Solution:** Let's calculate the outer product step by step:
 
@@ -123,7 +123,7 @@ $$a \otimes b = \begin{bmatrix} -3 & 0 & 3 \\ -2 & 0 & 2 \\ -1 & 0 & 1 \end{bmat
 - Notice the pattern: each row is a scaled version of vector $b$
 - The scaling factor is the corresponding element of vector $a$
 
-Question ii. [M] Give an example of how the outer product can be useful in ML.
+### Question ii. [M] Give an example of how the outer product can be useful in ML.
 
 **Solution:** The outer product is crucial in ML for modeling interactions:
 
