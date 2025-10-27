@@ -214,6 +214,7 @@ From first row: $x_1 + x_2 = 0$, so $x_1 = -x_2$
 **Solution**: $`v_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}`$ (any non-zero multiple)
 
 **Eigenvectors**: $`v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, v_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}`$
+
 **Result**: Unique eigendecomposition
 
 **Example 2: Non-unique eigendecomposition**
