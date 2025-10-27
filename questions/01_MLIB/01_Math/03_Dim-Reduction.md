@@ -290,6 +290,7 @@ $$\det\begin{bmatrix}
 **Eigenvalues**: $\lambda_1 = \lambda_2 = 1$ (repeated)
 
 **Step 2: Find eigenvectors for $\lambda = 1$**
+
 Solve $(A - I)v = 0$:
 $$\begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$$
 From first row: $x_2 = 0$
