@@ -1,6 +1,6 @@
 # Matrices
 
-Question 1. [E] Why do we say that matrices are linear transformations?
+## Question 1. [E] Why do we say that matrices are linear transformations?
 
 **Solution:** Matrices represent linear transformations because they satisfy the fundamental properties of linearity:
 
