@@ -309,6 +309,7 @@ x_2
 From first row: $x_2 = 0$
 
 From second row: $0 = 0$ (redundant)
+
 **Solution**: Only vectors of the form $v = \begin{bmatrix} a \\ 0 \end{bmatrix}$ where $a \neq 0$
 
 **Step 3: Check if we have enough eigenvectors**
