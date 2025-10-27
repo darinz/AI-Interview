@@ -362,7 +362,7 @@ From second row: $0 = 0$ (redundant)
 
 **Key Insight**: Eigendecomposition is NOT always unique, especially when eigenvalues are repeated. This is crucial in ML because it affects the stability and interpretability of algorithms like PCA and LDA. The solution is often to use regularization, choose specific eigenvectors, or use more stable alternatives like SVD.
 
-Question 3. [M] Name some applications of eigenvalues and eigenvectors.
+## Question 3. [M] Name some applications of eigenvalues and eigenvectors.
 
 **Solution:**
 
