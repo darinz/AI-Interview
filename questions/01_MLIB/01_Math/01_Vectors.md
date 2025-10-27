@@ -541,7 +541,7 @@ Think of a norm as a "ruler" that measures how "big" or "important" a vector is.
 - **$L_2$**: "What's the geometric distance?" (smooth optimization)
 - **$L_{\infty}$**: "What's the worst case?" (focus on extremes)
 
-Question ii. [M] How do norm and metric differ? Given a norm, make a metric. Given a metric, can we make a norm?
+### Question ii. [M] How do norm and metric differ? Given a norm, make a metric. Given a metric, can we make a norm?
 
 **Solution:**
 
