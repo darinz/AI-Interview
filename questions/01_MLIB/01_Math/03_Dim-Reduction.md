@@ -646,7 +646,7 @@ $$C = \begin{bmatrix} 1.0 & 0.8 \\ 0.8 & 1.0 \end{bmatrix}$$
 
 **Key Insight**: PCA will technically "work" on unscaled data, but it will give misleading results. The features with larger ranges will dominate the principal components, and you'll lose important information from smaller-scale features. Always scale your data before PCA to ensure all features contribute meaningfully to the analysis.
 
-Question 5. [H] Under what conditions can one apply eigendecomposition? What about SVD?
+## Question 5. [H] Under what conditions can one apply eigendecomposition? What about SVD?
 
    i. What is the relationship between SVD and eigendecomposition?
 
