@@ -263,7 +263,7 @@ x_2
 - $`v_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}`$
 - $`v_3 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}`$
 - $`v_4 = \begin{bmatrix} 3 \\ -2 \end{bmatrix}`$
-- **Any**: $`v = \begin{bmatrix} a \\ b \end{bmatrix}$ where $a^2 + b^2 \neq 0`$
+- **Any**: $`v = \begin{bmatrix} a \\ b \end{bmatrix}`$ where $`a^2 + b^2 \neq 0`$
 
 **Eigenvectors**: ANY two linearly independent vectors!
 
