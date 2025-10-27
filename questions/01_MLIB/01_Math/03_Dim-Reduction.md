@@ -157,7 +157,25 @@ $$A = \begin{bmatrix}
 0 & 2 
 \end{bmatrix}$$
 
+**Step-by-step eigenvector calculation:**
+
+**Step 1: Find eigenvalues**
+Characteristic equation: $\det(A - \lambda I) = 0$
+$$\det\begin{bmatrix} 3-\lambda & 1 \\ 0 & 2-\lambda \end{bmatrix} = (3-\lambda)(2-\lambda) = 0$$
 **Eigenvalues**: $\lambda_1 = 3, \lambda_2 = 2$ (distinct)
+
+**Step 2: Find eigenvector for $\lambda_1 = 3$**
+Solve $(A - 3I)v_1 = 0$:
+$$\begin{bmatrix} 0 & 1 \\ 0 & -1 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$$
+From first row: $x_2 = 0$
+From second row: $-x_2 = 0$ (redundant)
+**Solution**: $v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ (any non-zero multiple)
+
+**Step 3: Find eigenvector for $\lambda_2 = 2$**
+Solve $(A - 2I)v_2 = 0$:
+$$\begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$$
+From first row: $x_1 + x_2 = 0$, so $x_1 = -x_2$
+**Solution**: $v_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}$ (any non-zero multiple)
 
 **Eigenvectors**: $`v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, v_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}`$
 **Result**: Unique eigendecomposition
@@ -169,7 +187,25 @@ $$A = \begin{bmatrix}
 0 & 2 
 \end{bmatrix}$$
 
+**Step-by-step eigenvector calculation:**
+
+**Step 1: Find eigenvalues**
+Characteristic equation: $\det(A - \lambda I) = 0$
+$$\det\begin{bmatrix} 2-\lambda & 0 \\ 0 & 2-\lambda \end{bmatrix} = (2-\lambda)^2 = 0$$
 **Eigenvalues**: $\lambda_1 = \lambda_2 = 2$ (repeated)
+
+**Step 2: Find eigenvectors for $\lambda = 2$**
+Solve $(A - 2I)v = 0$:
+$$\begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$$
+**Both equations**: $0 = 0$ (no constraints!)
+**Solution**: ANY non-zero vector is an eigenvector!
+
+**Examples of valid eigenvectors:**
+- $v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$
+- $v_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$
+- $v_3 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$
+- $v_4 = \begin{bmatrix} 3 \\ -2 \end{bmatrix}$
+- **Any**: $v = \begin{bmatrix} a \\ b \end{bmatrix}$ where $a^2 + b^2 \neq 0$
 
 **Eigenvectors**: ANY two linearly independent vectors!
 
@@ -182,7 +218,24 @@ $$A = \begin{bmatrix}
 0 & 1 
 \end{bmatrix}$$
 
+**Step-by-step eigenvector calculation:**
+
+**Step 1: Find eigenvalues**
+Characteristic equation: $\det(A - \lambda I) = 0$
+$$\det\begin{bmatrix} 1-\lambda & 1 \\ 0 & 1-\lambda \end{bmatrix} = (1-\lambda)^2 = 0$$
 **Eigenvalues**: $\lambda_1 = \lambda_2 = 1$ (repeated)
+
+**Step 2: Find eigenvectors for $\lambda = 1$**
+Solve $(A - I)v = 0$:
+$$\begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$$
+From first row: $x_2 = 0$
+From second row: $0 = 0$ (redundant)
+**Solution**: Only vectors of the form $v = \begin{bmatrix} a \\ 0 \end{bmatrix}$ where $a \neq 0$
+
+**Step 3: Check if we have enough eigenvectors**
+- **Algebraic multiplicity**: 2 (eigenvalue appears twice in characteristic polynomial)
+- **Geometric multiplicity**: 1 (only one linearly independent eigenvector)
+- **Problem**: We need 2 linearly independent eigenvectors for a 2×2 matrix
 
 **Eigenvectors**: Only $`v = \begin{bmatrix} 1 \\ 0 \end{bmatrix}`$ (defective matrix)
 
