@@ -177,7 +177,9 @@ From second row: $-x_2 = 0$ (redundant)
 **Solution**: $v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ (any non-zero multiple)
 
 **Step 3: Find eigenvector for $\lambda_2 = 2$**
+
 Solve $(A - 2I)v_2 = 0$:
+
 $$\begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$$
 From first row: $x_1 + x_2 = 0$, so $x_1 = -x_2$
 **Solution**: $v_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}$ (any non-zero multiple)
