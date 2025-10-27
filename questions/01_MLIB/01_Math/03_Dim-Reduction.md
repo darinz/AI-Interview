@@ -108,7 +108,7 @@ Think of dimensionality reduction like organizing a messy room. You have thousan
 
 **Key Insight**: Dimensionality reduction is essential in modern ML because it addresses the fundamental problems of high-dimensional data: computational inefficiency, overfitting, noise, and the curse of dimensionality. It's not just about making algorithms faster—it's about making them work better by focusing on the most important information.
 
-Question 2. [E] Eigendecomposition is a common factorization technique used for dimensionality reduction. Is the eigendecomposition of a matrix always unique?
+## Question 2. [E] Eigendecomposition is a common factorization technique used for dimensionality reduction. Is the eigendecomposition of a matrix always unique?
 
 **Solution:**
 
