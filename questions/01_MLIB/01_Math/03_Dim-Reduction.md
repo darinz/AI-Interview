@@ -160,6 +160,7 @@ $$A = \begin{bmatrix}
 **Step-by-step eigenvector calculation:**
 
 **Step 1: Find eigenvalues**
+
 Characteristic equation: $\det(A - \lambda I) = 0$
 
 $$\det\begin{bmatrix} 
