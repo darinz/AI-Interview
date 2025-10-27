@@ -904,7 +904,7 @@ $$\frac{\partial y}{\partial x} = \begin{bmatrix}
 
 **Key Insight**: The Jacobian has dimensions $(nm) \times (nd)$, but its block diagonal structure makes it much more efficient to compute and store than a general matrix of this size. This is crucial for efficient neural network training, especially with large batch sizes.
 
-Question 11. [H] Given a very large symmetric matrix $A$ that doesn't fit in memory, say $A \in \mathbb{R}^{1M \times 1M}$ and a function $f$ that can quickly compute $f(x) = Ax$ for $x \in \mathbb{R}^{1M}$. Find the unit vector $x$ such that $x^T Ax$ is minimal.
+## Question 11. [H] Given a very large symmetric matrix $A$ that doesn't fit in memory, say $A \in \mathbb{R}^{1M \times 1M}$ and a function $f$ that can quickly compute $f(x) = Ax$ for $x \in \mathbb{R}^{1M}$. Find the unit vector $x$ such that $x^T Ax$ is minimal.
     
 **Hint:** Can you frame it as an optimization problem and use gradient descent to find an approximate solution?
 
