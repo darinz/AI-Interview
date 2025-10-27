@@ -51,7 +51,7 @@ A transformation $T$ is linear if for any vectors $u, v$ and scalar $c$:
 
 **Key Insight**: Every matrix operation in ML (forward pass, backpropagation, optimization) relies on the linearity property. This is why we can use efficient matrix operations and why gradient-based optimization works so well.
 
-Question 2. [E] What's the inverse of a matrix? Do all matrices have an inverse? Is the inverse of a matrix always unique?
+## Question 2. [E] What's the inverse of a matrix? Do all matrices have an inverse? Is the inverse of a matrix always unique?
 
 **Solution:** Matrix inverses are fundamental in ML for solving linear systems and understanding model behavior:
 
