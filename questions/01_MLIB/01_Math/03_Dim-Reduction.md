@@ -161,7 +161,12 @@ $$A = \begin{bmatrix}
 
 **Step 1: Find eigenvalues**
 Characteristic equation: $\det(A - \lambda I) = 0$
-$$\det\begin{bmatrix} 3-\lambda & 1 \\ 0 & 2-\lambda \end{bmatrix} = (3-\lambda)(2-\lambda) = 0$$
+
+$$\det\begin{bmatrix} 
+3-\lambda & 1 \\ 
+0 & 2-\lambda 
+\end{bmatrix} = (3-\lambda)(2-\lambda) = 0$$
+
 **Eigenvalues**: $\lambda_1 = 3, \lambda_2 = 2$ (distinct)
 
 **Step 2: Find eigenvector for $\lambda_1 = 3$**
