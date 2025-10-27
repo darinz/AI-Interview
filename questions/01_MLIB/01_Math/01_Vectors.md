@@ -93,83 +93,83 @@ Imagine you have a flashlight (vector $u$) and want to point it in the direction
 
 2. Outer product
    
-   Question i. [E] Given two vectors $a = [3, 2, 1]$ and $b = [-1, 0, 1]$. Calculate the outer product $a^T b$?
-   
-   **Solution:** Let's calculate the outer product step by step:
+Question i. [E] Given two vectors $a = [3, 2, 1]$ and $b = [-1, 0, 1]$. Calculate the outer product $a^T b$?
 
-   **Understanding the Outer Product:**
-   The outer product creates a matrix by multiplying every element of the first vector with every element of the second vector. Think of it as "spreading out" one vector against another.
+**Solution:** Let's calculate the outer product step by step:
 
-   **Step-by-Step Calculation:**
+**Understanding the Outer Product:**
+The outer product creates a matrix by multiplying every element of the first vector with every element of the second vector. Think of it as "spreading out" one vector against another.
 
-   **Given vectors:**
-   - $a = [3, 2, 1]$ (column vector)
-   - $b = [-1, 0, 1]$ (row vector)
+**Step-by-Step Calculation:**
 
-   **Step 1: Set up the multiplication**
-   $$a \otimes b = \begin{bmatrix} 3 \\ 2 \\ 1 \end{bmatrix} \begin{bmatrix} -1 & 0 & 1 \end{bmatrix}$$
+**Given vectors:**
+- $a = [3, 2, 1]$ (column vector)
+- $b = [-1, 0, 1]$ (row vector)
 
-   **Step 2: Multiply each element of a with each element of b**
-   - Row 1: $3 \times [-1, 0, 1] = [3(-1), 3(0), 3(1)] = [-3, 0, 3]$
-   - Row 2: $2 \times [-1, 0, 1] = [2(-1), 2(0), 2(1)] = [-2, 0, 2]$
-   - Row 3: $1 \times [-1, 0, 1] = [1(-1), 1(0), 1(1)] = [-1, 0, 1]$
+**Step 1: Set up the multiplication**
+$$a \otimes b = \begin{bmatrix} 3 \\ 2 \\ 1 \end{bmatrix} \begin{bmatrix} -1 & 0 & 1 \end{bmatrix}$$
 
-   **Step 3: Combine into matrix**
-   $$a \otimes b = \begin{bmatrix} -3 & 0 & 3 \\ -2 & 0 & 2 \\ -1 & 0 & 1 \end{bmatrix}$$
+**Step 2: Multiply each element of a with each element of b**
+- Row 1: $3 \times [-1, 0, 1] = [3(-1), 3(0), 3(1)] = [-3, 0, 3]$
+- Row 2: $2 \times [-1, 0, 1] = [2(-1), 2(0), 2(1)] = [-2, 0, 2]$
+- Row 3: $1 \times [-1, 0, 1] = [1(-1), 1(0), 1(1)] = [-1, 0, 1]$
 
-   **Intuitive Understanding:**
-   - The outer product creates a "multiplication table" between two vectors
-   - Each element $(i,j)$ of the result is $a_i \times b_j$
-   - Notice the pattern: each row is a scaled version of vector $b$
-   - The scaling factor is the corresponding element of vector $a$
-   
-   Question ii. [M] Give an example of how the outer product can be useful in ML.
-   
-   **Solution:** The outer product is crucial in ML for modeling interactions:
+**Step 3: Combine into matrix**
+$$a \otimes b = \begin{bmatrix} -3 & 0 & 3 \\ -2 & 0 & 2 \\ -1 & 0 & 1 \end{bmatrix}$$
 
-   **Intuitive Understanding:**
-   The outer product captures "what happens when every element of one thing interacts with every element of another thing." It's like creating a comprehensive interaction table.
+**Intuitive Understanding:**
+- The outer product creates a "multiplication table" between two vectors
+- Each element $(i,j)$ of the result is $a_i \times b_j$
+- Notice the pattern: each row is a scaled version of vector $b$
+- The scaling factor is the corresponding element of vector $a$
 
-   **Detailed ML Applications:**
+Question ii. [M] Give an example of how the outer product can be useful in ML.
 
-   **1. Factorization Machines (Recommendation Systems):**
-   - **Problem**: How do user preferences interact with item features?
-   - **Solution**: Use outer product to model user-item interactions
-   - **Example**: User vector [1, 0, 1] (likes action, not romance, likes sci-fi) × Item vector [1, 1, 0] (action, romance, not sci-fi)
-   - **Result**: Outer product shows interaction strength for each feature pair
-   - **Why useful**: Captures that "action-loving users" might like "action movies" more than "romance movies"
+**Solution:** The outer product is crucial in ML for modeling interactions:
 
-   **2. Neural Tensor Networks (Knowledge Graphs):**
-   - **Problem**: How do entities relate to each other?
-   - **Solution**: Use outer product to model entity-relation-entity triplets
-   - **Example**: "Paris" × "capital_of" × "France" - the outer product captures the relationship strength
-   - **Why useful**: Different relations (capital_of vs. located_in) have different interaction patterns
+**Intuitive Understanding:**
+The outer product captures "what happens when every element of one thing interacts with every element of another thing." It's like creating a comprehensive interaction table.
 
-   **3. Bilinear Pooling (Computer Vision):**
-   - **Problem**: How do different spatial locations interact in images?
-   - **Solution**: Outer product of spatial features captures location interactions
-   - **Example**: Features from top-left corner × features from bottom-right corner
-   - **Why useful**: Captures spatial relationships like "object A is above object B"
+**Detailed ML Applications:**
 
-   **4. Self-Attention in Transformers:**
-   - **Problem**: How much should each word attend to every other word?
-   - **Solution**: $QK^T$ computes attention scores between all word pairs
-   - **Example**: Query "cat" × Key "animal" = high attention (related)
-   - **Why useful**: Captures long-range dependencies in text
+**1. Factorization Machines (Recommendation Systems):**
+- **Problem**: How do user preferences interact with item features?
+- **Solution**: Use outer product to model user-item interactions
+- **Example**: User vector [1, 0, 1] (likes action, not romance, likes sci-fi) × Item vector [1, 1, 0] (action, romance, not sci-fi)
+- **Result**: Outer product shows interaction strength for each feature pair
+- **Why useful**: Captures that "action-loving users" might like "action movies" more than "romance movies"
 
-   **5. Covariance Matrix (PCA):**
-   - **Problem**: How do features vary together?
-   - **Solution**: $\frac{1}{n}XX^T$ computes feature covariance
-   - **Example**: Height and weight features - outer product shows how they co-vary
-   - **Why useful**: Principal components are directions of maximum covariance
+**2. Neural Tensor Networks (Knowledge Graphs):**
+- **Problem**: How do entities relate to each other?
+- **Solution**: Use outer product to model entity-relation-entity triplets
+- **Example**: "Paris" × "capital_of" × "France" - the outer product captures the relationship strength
+- **Why useful**: Different relations (capital_of vs. located_in) have different interaction patterns
 
-   **6. Word Co-occurrence (NLP):**
-   - **Problem**: Which words appear together frequently?
-   - **Solution**: Outer product of word vectors captures co-occurrence patterns
-   - **Example**: "cat" and "dog" might have high interaction in the outer product
-   - **Why useful**: Captures semantic relationships between words
+**3. Bilinear Pooling (Computer Vision):**
+- **Problem**: How do different spatial locations interact in images?
+- **Solution**: Outer product of spatial features captures location interactions
+- **Example**: Features from top-left corner × features from bottom-right corner
+- **Why useful**: Captures spatial relationships like "object A is above object B"
 
-   **Key Insight**: The outer product is powerful because it explicitly models pairwise interactions that simple linear models miss. It's like asking "what happens when feature A meets feature B?" for every possible pair.
+**4. Self-Attention in Transformers:**
+- **Problem**: How much should each word attend to every other word?
+- **Solution**: $QK^T$ computes attention scores between all word pairs
+- **Example**: Query "cat" × Key "animal" = high attention (related)
+- **Why useful**: Captures long-range dependencies in text
+
+**5. Covariance Matrix (PCA):**
+- **Problem**: How do features vary together?
+- **Solution**: $\frac{1}{n}XX^T$ computes feature covariance
+- **Example**: Height and weight features - outer product shows how they co-vary
+- **Why useful**: Principal components are directions of maximum covariance
+
+**6. Word Co-occurrence (NLP):**
+- **Problem**: Which words appear together frequently?
+- **Solution**: Outer product of word vectors captures co-occurrence patterns
+- **Example**: "cat" and "dog" might have high interaction in the outer product
+- **Why useful**: Captures semantic relationships between words
+
+**Key Insight**: The outer product is powerful because it explicitly models pairwise interactions that simple linear models miss. It's like asking "what happens when feature A meets feature B?" for every possible pair.
 
 Question 3. [E] What does it mean for two vectors to be linearly independent?
 
@@ -473,179 +473,179 @@ $$\text{dim}(\text{span}\{v_1, v_2, \ldots, v_n\}) = \text{rank}([v_1, v_2, \ldo
 
 6. Norms and metrics
    
-   Question i. [E] What's a norm? What are $L_0, L_1, L_2, L_{\infty}$ norms?
-   
-   **Solution:**
+Question i. [E] What's a norm? What are $L_0, L_1, L_2, L_{\infty}$ norms?
 
-   **What is a norm?**
-   A norm measures vector "size" and is fundamental in ML for regularization, optimization, and distance calculations:
+**Solution:**
 
-   **Intuitive Understanding:**
-   Think of a norm as a "ruler" that measures how "big" or "important" a vector is. Different norms give different answers to the question "how big is this vector?" depending on what we care about.
+**What is a norm?**
+A norm measures vector "size" and is fundamental in ML for regularization, optimization, and distance calculations:
 
-   **Mathematical Properties:**
-   1. **Positive definiteness**: $||v|| \geq 0$ and $||v|| = 0$ iff $v = 0$ (size is never negative, zero only for zero vector)
-   2. **Homogeneity**: $||\alpha v|| = |\alpha| \cdot ||v||$ (scaling the vector scales the norm proportionally)
-   3. **Triangle inequality**: $||u + v|| \leq ||u|| + ||v||$ (shortest path between two points is a straight line)
+**Intuitive Understanding:**
+Think of a norm as a "ruler" that measures how "big" or "important" a vector is. Different norms give different answers to the question "how big is this vector?" depending on what we care about.
 
-   **Detailed ML Applications:**
+**Mathematical Properties:**
+1. **Positive definiteness**: $||v|| \geq 0$ and $||v|| = 0$ iff $v = 0$ (size is never negative, zero only for zero vector)
+2. **Homogeneity**: $||\alpha v|| = |\alpha| \cdot ||v||$ (scaling the vector scales the norm proportionally)
+3. **Triangle inequality**: $||u + v|| \leq ||u|| + ||v||$ (shortest path between two points is a straight line)
 
-   **$L_0$ norm (Sparsity)**: $||x||_0 = \text{number of non-zero elements}$
-   - **Intuition**: "How many features are actually being used?"
-   - **ML Application**: Feature selection - minimize $L_0$ to select most important features
-   - **Example**: If $x = [0, 5, 0, 3, 0]$, then $||x||_0 = 2$ (only 2 features are active)
-   - **Problem**: Not differentiable, so we use $L_1$ as a convex relaxation
-   - **Why important**: Sparse models are easier to interpret and faster to compute
+**Detailed ML Applications:**
 
-   **$L_1$ norm (Lasso regularization)**: $`||x||_1 = \sum_{i=1}^n |x_i|`$
-   - **Intuition**: "What's the total absolute value of all features?"
-   - **ML Application**: L1 regularization $\min \text{loss} + \lambda ||w||_1$ encourages sparsity
-   - **Example**: If $x = [2, -3, 0, 1]$, then $||x||_1 = 2 + 3 + 0 + 1 = 6$
-   - **Why sparsity**: L1 penalty drives some weights to exactly zero
-   - **Robust to outliers**: Less sensitive than $L_2$ to extreme values
-   - **Feature selection**: Automatically selects important features by zeroing others
+**$L_0$ norm (Sparsity)**: $||x||_0 = \text{number of non-zero elements}$
+- **Intuition**: "How many features are actually being used?"
+- **ML Application**: Feature selection - minimize $L_0$ to select most important features
+- **Example**: If $x = [0, 5, 0, 3, 0]$, then $||x||_0 = 2$ (only 2 features are active)
+- **Problem**: Not differentiable, so we use $L_1$ as a convex relaxation
+- **Why important**: Sparse models are easier to interpret and faster to compute
 
-   **$L_2$ norm (Ridge regularization)**: $`||x||_2 = \sqrt{\sum_{i=1}^n x_i^2}`$
-   - **Intuition**: "What's the Euclidean distance from origin?" (Pythagorean theorem)
-   - **ML Application**: L2 regularization $\min \text{loss} + \lambda ||w||_2^2$ prevents overfitting
-   - **Example**: If $x = [3, 4]$, then $||x||_2 = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = 5$
-   - **Why good for optimization**: L2 gradients are well-behaved (smooth)
-   - **Distance metrics**: Euclidean distance for clustering, similarity
-   - **Geometric interpretation**: Length of the vector in Euclidean space
+**$L_1$ norm (Lasso regularization)**: $`||x||_1 = \sum_{i=1}^n |x_i|`$
+- **Intuition**: "What's the total absolute value of all features?"
+- **ML Application**: L1 regularization $\min \text{loss} + \lambda ||w||_1$ encourages sparsity
+- **Example**: If $x = [2, -3, 0, 1]$, then $||x||_1 = 2 + 3 + 0 + 1 = 6$
+- **Why sparsity**: L1 penalty drives some weights to exactly zero
+- **Robust to outliers**: Less sensitive than $L_2$ to extreme values
+- **Feature selection**: Automatically selects important features by zeroing others
 
-   **$L_{\infty}$ norm (Max pooling)**: $`||x||_{\infty} = \max_{i} |x_i|`$
-   - **Intuition**: "What's the largest absolute value among all features?"
-   - **ML Application**: Max pooling in CNNs captures strongest activation
-   - **Example**: If $x = [2, -5, 1, 3]$, then $||x||_{\infty} = \max(2, 5, 1, 3) = 5$
-   - **Robust optimization**: Minimize worst-case loss (focus on the biggest error)
-   - **Normalization**: Used in batch normalization for stability
-   - **Why useful**: Focuses on the most important feature (the maximum)
+**$L_2$ norm (Ridge regularization)**: $`||x||_2 = \sqrt{\sum_{i=1}^n x_i^2}`$
+- **Intuition**: "What's the Euclidean distance from origin?" (Pythagorean theorem)
+- **ML Application**: L2 regularization $\min \text{loss} + \lambda ||w||_2^2$ prevents overfitting
+- **Example**: If $x = [3, 4]$, then $||x||_2 = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = 5$
+- **Why good for optimization**: L2 gradients are well-behaved (smooth)
+- **Distance metrics**: Euclidean distance for clustering, similarity
+- **Geometric interpretation**: Length of the vector in Euclidean space
 
-   **Step-by-Step Examples:**
+**$L_{\infty}$ norm (Max pooling)**: $`||x||_{\infty} = \max_{i} |x_i|`$
+- **Intuition**: "What's the largest absolute value among all features?"
+- **ML Application**: Max pooling in CNNs captures strongest activation
+- **Example**: If $x = [2, -5, 1, 3]$, then $||x||_{\infty} = \max(2, 5, 1, 3) = 5$
+- **Robust optimization**: Minimize worst-case loss (focus on the biggest error)
+- **Normalization**: Used in batch normalization for stability
+- **Why useful**: Focuses on the most important feature (the maximum)
 
-   **Example 1: Vector $x = [3, -4, 0, 2]$**
-   - **$L_0$**: $||x||_0 = 3$ (3 non-zero elements)
-   - **$L_1$**: $||x||_1 = 3 + 4 + 0 + 2 = 9$ (sum of absolute values)
-   - **$L_2$**: $||x||_2 = \sqrt{3^2 + 4^2 + 0^2 + 2^2} = \sqrt{9 + 16 + 0 + 4} = \sqrt{29} \approx 5.39$
-   - **$L_{\infty}$**: $||x||_{\infty} = \max(3, 4, 0, 2) = 4$ (maximum absolute value)
+**Step-by-Step Examples:**
 
-   **Example 2: Sparse vector $x = [0, 0, 5, 0, 0]$**
-   - **$L_0$**: $||x||_0 = 1$ (only 1 non-zero element)
-   - **$L_1$**: $||x||_1 = 5$ (sum of absolute values)
-   - **$L_2$**: $||x||_2 = 5$ (Euclidean distance)
-   - **$L_{\infty}$**: $||x||_{\infty} = 5$ (maximum absolute value)
+**Example 1: Vector $x = [3, -4, 0, 2]$**
+- **$L_0$**: $||x||_0 = 3$ (3 non-zero elements)
+- **$L_1$**: $||x||_1 = 3 + 4 + 0 + 2 = 9$ (sum of absolute values)
+- **$L_2$**: $||x||_2 = \sqrt{3^2 + 4^2 + 0^2 + 2^2} = \sqrt{9 + 16 + 0 + 4} = \sqrt{29} \approx 5.39$
+- **$L_{\infty}$**: $||x||_{\infty} = \max(3, 4, 0, 2) = 4$ (maximum absolute value)
 
-   **ML Intuition:**
-   - **$L_0$**: "How many features matter?" (sparsity)
-   - **$L_1$**: "What's the total impact?" (robust to outliers)
-   - **$L_2$**: "What's the geometric distance?" (smooth optimization)
-   - **$L_{\infty}$**: "What's the worst case?" (focus on extremes)
-   
-   Question ii. [M] How do norm and metric differ? Given a norm, make a metric. Given a metric, can we make a norm?
+**Example 2: Sparse vector $x = [0, 0, 5, 0, 0]$**
+- **$L_0$**: $||x||_0 = 1$ (only 1 non-zero element)
+- **$L_1$**: $||x||_1 = 5$ (sum of absolute values)
+- **$L_2$**: $||x||_2 = 5$ (Euclidean distance)
+- **$L_{\infty}$**: $||x||_{\infty} = 5$ (maximum absolute value)
 
-   **Solution:**
+**ML Intuition:**
+- **$L_0$**: "How many features matter?" (sparsity)
+- **$L_1$**: "What's the total impact?" (robust to outliers)
+- **$L_2$**: "What's the geometric distance?" (smooth optimization)
+- **$L_{\infty}$**: "What's the worst case?" (focus on extremes)
 
-   **Intuitive Understanding:**
-   Think of norms and metrics as different ways to measure "size" and "distance":
-   - **Norms**: Measure the "size" of a single vector (like measuring the length of a stick)
-   - **Metrics**: Measure the "distance" between two points (like measuring the distance between two cities)
-   - **Key insight**: Every norm can create a metric, but not every metric can create a norm
+Question ii. [M] How do norm and metric differ? Given a norm, make a metric. Given a metric, can we make a norm?
 
-   **ML Context - Norms vs Metrics:**
+**Solution:**
 
-   **Norms in ML:**
-   - **Purpose**: Measure vector "size" for regularization, optimization, feature scaling
-   - **Examples**: L1/L2 regularization, gradient clipping, feature normalization
-   - **Requirement**: Need vector space structure (addition and scalar multiplication)
+**Intuitive Understanding:**
+Think of norms and metrics as different ways to measure "size" and "distance":
+- **Norms**: Measure the "size" of a single vector (like measuring the length of a stick)
+- **Metrics**: Measure the "distance" between two points (like measuring the distance between two cities)
+- **Key insight**: Every norm can create a metric, but not every metric can create a norm
 
-   **Metrics in ML:**
-   - **Purpose**: Measure "distance" for clustering, similarity, loss functions
-   - **Examples**: Euclidean distance for k-NN, cosine similarity for text, Hamming distance for categorical data
-   - **Requirement**: Work on any data (vectors, strings, graphs, etc.)
+**ML Context - Norms vs Metrics:**
 
-   **Step-by-Step: From Norm to Metric (Always Possible)**
+**Norms in ML:**
+- **Purpose**: Measure vector "size" for regularization, optimization, feature scaling
+- **Examples**: L1/L2 regularization, gradient clipping, feature normalization
+- **Requirement**: Need vector space structure (addition and scalar multiplication)
 
-   **Step 1: Start with any norm**
-   - Example: $L_2$ norm $||x||_2 = \sqrt{\sum x_i^2}$
+**Metrics in ML:**
+- **Purpose**: Measure "distance" for clustering, similarity, loss functions
+- **Examples**: Euclidean distance for k-NN, cosine similarity for text, Hamming distance for categorical data
+- **Requirement**: Work on any data (vectors, strings, graphs, etc.)
 
-   **Step 2: Create distance function**
-   - Formula: $d(x,y) = ||x - y||$
-   - Intuition: Distance = size of the difference vector
+**Step-by-Step: From Norm to Metric (Always Possible)**
 
-   **Step 3: Verify it's a metric**
-   - **Positive definiteness**: $d(x,y) \geq 0$ and $d(x,y) = 0$ iff $x = y$ ✓
-   - **Symmetry**: $d(x,y) = d(y,x)$ ✓
-   - **Triangle inequality**: $d(x,z) \leq d(x,y) + d(y,z)$ ✓
+**Step 1: Start with any norm**
+- Example: $L_2$ norm $||x||_2 = \sqrt{\sum x_i^2}$
 
-   **Concrete Examples:**
+**Step 2: Create distance function**
+- Formula: $d(x,y) = ||x - y||$
+- Intuition: Distance = size of the difference vector
 
-   **Example 1: $L_2$ norm → Euclidean distance**
-   - **Norm**: $||x||_2 = \sqrt{\sum x_i^2}$
-   - **Metric**: $d(x,y) = ||x - y||_2 = \sqrt{\sum (x_i - y_i)^2}$
-   - **ML use**: k-NN, clustering, similarity search
+**Step 3: Verify it's a metric**
+- **Positive definiteness**: $d(x,y) \geq 0$ and $d(x,y) = 0$ iff $x = y$ ✓
+- **Symmetry**: $d(x,y) = d(y,x)$ ✓
+- **Triangle inequality**: $d(x,z) \leq d(x,y) + d(y,z)$ ✓
 
-   **Example 2: $L_1$ norm → Manhattan distance**
-   - **Norm**: $||x||_1 = \sum |x_i|$
-   - **Metric**: $d(x,y) = ||x - y||_1 = \sum |x_i - y_i|$
-   - **ML use**: Robust to outliers, sparse data
+**Concrete Examples:**
 
-   **Example 3: $L_{\infty}$ norm → Chebyshev distance**
-   - **Norm**: $||x||_{\infty} = \max_i |x_i|$
-   - **Metric**: $d(x,y) = ||x - y||_{\infty} = \max_i |x_i - y_i|$
-   - **ML use**: Max pooling, robust optimization
+**Example 1: $L_2$ norm → Euclidean distance**
+- **Norm**: $||x||_2 = \sqrt{\sum x_i^2}$
+- **Metric**: $d(x,y) = ||x - y||_2 = \sqrt{\sum (x_i - y_i)^2}$
+- **ML use**: k-NN, clustering, similarity search
 
-   **Step-by-Step: From Metric to Norm (Not Always Possible)**
+**Example 2: $L_1$ norm → Manhattan distance**
+- **Norm**: $||x||_1 = \sum |x_i|$
+- **Metric**: $d(x,y) = ||x - y||_1 = \sum |x_i - y_i|$
+- **ML use**: Robust to outliers, sparse data
 
-   **Step 1: Start with a metric**
-   - Example: Cosine distance $d(x,y) = 1 - \frac{x \cdot y}{||x||_2 ||y||_2}$
+**Example 3: $L_{\infty}$ norm → Chebyshev distance**
+- **Norm**: $||x||_{\infty} = \max_i |x_i|$
+- **Metric**: $d(x,y) = ||x - y||_{\infty} = \max_i |x_i - y_i|$
+- **ML use**: Max pooling, robust optimization
 
-   **Step 2: Check required conditions**
-   - **Translation invariance**: $d(x + z, y + z) = d(x, y)$?
-   - **Homogeneity**: $d(\alpha x, \alpha y) = |\alpha| d(x, y)$?
-   - **Origin condition**: $d(0, x) = ||x||$?
+**Step-by-Step: From Metric to Norm (Not Always Possible)**
 
-   **Step 3: Determine if possible**
-   - If all conditions hold → can define norm
-   - If any condition fails → cannot define norm
+**Step 1: Start with a metric**
+- Example: Cosine distance $d(x,y) = 1 - \frac{x \cdot y}{||x||_2 ||y||_2}$
 
-   **Detailed Examples:**
+**Step 2: Check required conditions**
+- **Translation invariance**: $d(x + z, y + z) = d(x, y)$?
+- **Homogeneity**: $d(\alpha x, \alpha y) = |\alpha| d(x, y)$?
+- **Origin condition**: $d(0, x) = ||x||$?
 
-   **Example 1: Euclidean metric → $L_2$ norm ✓**
-   - **Metric**: $d(x,y) = \sqrt{\sum (x_i - y_i)^2}$
-   - **Translation invariance**: $d(x + z, y + z) = \sqrt{\sum ((x_i + z_i) - (y_i + z_i))^2} = \sqrt{\sum (x_i - y_i)^2} = d(x,y)$ ✓
-   - **Homogeneity**: $d(\alpha x, \alpha y) = \sqrt{\sum (\alpha x_i - \alpha y_i)^2} = |\alpha| \sqrt{\sum (x_i - y_i)^2} = |\alpha| d(x,y)$ ✓
-   - **Origin condition**: $d(0, x) = \sqrt{\sum (0 - x_i)^2} = \sqrt{\sum x_i^2} = ||x||_2$ ✓
-   - **Result**: Can define $L_2$ norm
+**Step 3: Determine if possible**
+- If all conditions hold → can define norm
+- If any condition fails → cannot define norm
 
-   **Example 2: Cosine distance → Cannot define norm ✗**
-   - **Metric**: $d(x,y) = 1 - \frac{x \cdot y}{||x||_2 ||y||_2}$
-   - **Translation invariance test**: $d(x + z, y + z) = 1 - \frac{(x + z) \cdot (y + z)}{||x + z||_2 ||y + z||_2}$
-   - **Problem**: This doesn't equal $d(x,y)$ because the dot product and norms change
-   - **Result**: Cannot define norm (not translation invariant)
+**Detailed Examples:**
 
-   **Example 3: Manhattan metric → $L_1$ norm ✓**
-   - **Metric**: $d(x,y) = \sum |x_i - y_i|$
-   - **Translation invariance**: $d(x + z, y + z) = \sum |(x_i + z_i) - (y_i + z_i)| = \sum |x_i - y_i| = d(x,y)$ ✓
-   - **Homogeneity**: $d(\alpha x, \alpha y) = \sum |\alpha x_i - \alpha y_i| = |\alpha| \sum |x_i - y_i| = |\alpha| d(x,y)$ ✓
-   - **Origin condition**: $d(0, x) = \sum |0 - x_i| = \sum |x_i| = ||x||_1$ ✓
-   - **Result**: Can define $L_1$ norm
+**Example 1: Euclidean metric → $L_2$ norm ✓**
+- **Metric**: $d(x,y) = \sqrt{\sum (x_i - y_i)^2}$
+- **Translation invariance**: $d(x + z, y + z) = \sqrt{\sum ((x_i + z_i) - (y_i + z_i))^2} = \sqrt{\sum (x_i - y_i)^2} = d(x,y)$ ✓
+- **Homogeneity**: $d(\alpha x, \alpha y) = \sqrt{\sum (\alpha x_i - \alpha y_i)^2} = |\alpha| \sqrt{\sum (x_i - y_i)^2} = |\alpha| d(x,y)$ ✓
+- **Origin condition**: $d(0, x) = \sqrt{\sum (0 - x_i)^2} = \sqrt{\sum x_i^2} = ||x||_2$ ✓
+- **Result**: Can define $L_2$ norm
 
-   **Practical ML Considerations:**
+**Example 2: Cosine distance → Cannot define norm ✗**
+- **Metric**: $d(x,y) = 1 - \frac{x \cdot y}{||x||_2 ||y||_2}$
+- **Translation invariance test**: $d(x + z, y + z) = 1 - \frac{(x + z) \cdot (y + z)}{||x + z||_2 ||y + z||_2}$
+- **Problem**: This doesn't equal $d(x,y)$ because the dot product and norms change
+- **Result**: Cannot define norm (not translation invariant)
 
-   **Feature Scaling:**
-   - **Problem**: Different features have different scales
-   - **Solution**: Use norms to normalize features before applying distance-based algorithms
-   - **Example**: Normalize features to unit $L_2$ norm before k-NN
+**Example 3: Manhattan metric → $L_1$ norm ✓**
+- **Metric**: $d(x,y) = \sum |x_i - y_i|$
+- **Translation invariance**: $d(x + z, y + z) = \sum |(x_i + z_i) - (y_i + z_i)| = \sum |x_i - y_i| = d(x,y)$ ✓
+- **Homogeneity**: $d(\alpha x, \alpha y) = \sum |\alpha x_i - \alpha y_i| = |\alpha| \sum |x_i - y_i| = |\alpha| d(x,y)$ ✓
+- **Origin condition**: $d(0, x) = \sum |0 - x_i| = \sum |x_i| = ||x||_1$ ✓
+- **Result**: Can define $L_1$ norm
 
-   **Regularization:**
-   - **Problem**: Model overfitting
-   - **Solution**: Use norms in loss functions to control model complexity
-   - **Example**: L1 regularization encourages sparsity, L2 regularization prevents large weights
+**Practical ML Considerations:**
 
-   **Optimization:**
-   - **Problem**: Different norms have different optimization landscapes
-   - **L1**: Non-differentiable at zero, encourages sparsity
-   - **L2**: Smooth everywhere, good for gradient descent
-   - **L∞**: Focuses on worst-case errors
+**Feature Scaling:**
+- **Problem**: Different features have different scales
+- **Solution**: Use norms to normalize features before applying distance-based algorithms
+- **Example**: Normalize features to unit $L_2$ norm before k-NN
 
-   **Key Insight**: Norms and metrics are closely related but serve different purposes. Every norm creates a metric, but only metrics with vector space properties can create norms. This distinction is crucial for choosing the right distance function in ML applications.
+**Regularization:**
+- **Problem**: Model overfitting
+- **Solution**: Use norms in loss functions to control model complexity
+- **Example**: L1 regularization encourages sparsity, L2 regularization prevents large weights
+
+**Optimization:**
+- **Problem**: Different norms have different optimization landscapes
+- **L1**: Non-differentiable at zero, encourages sparsity
+- **L2**: Smooth everywhere, good for gradient descent
+- **L∞**: Focuses on worst-case errors
+
+**Key Insight**: Norms and metrics are closely related but serve different purposes. Every norm creates a metric, but only metrics with vector space properties can create norms. This distinction is crucial for choosing the right distance function in ML applications.
