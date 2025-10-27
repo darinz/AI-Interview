@@ -171,7 +171,7 @@ The outer product captures "what happens when every element of one thing interac
 
 **Key Insight**: The outer product is powerful because it explicitly models pairwise interactions that simple linear models miss. It's like asking "what happens when feature A meets feature B?" for every possible pair.
 
-Question 3. [E] What does it mean for two vectors to be linearly independent?
+## Question 3. [E] What does it mean for two vectors to be linearly independent?
 
 **Solution:** Linear independence is crucial in ML for understanding feature relationships and model capacity:
 
@@ -245,7 +245,7 @@ Two vectors $\vec{v_1}$ and $\vec{v_2}$ are linearly independent if:
 - **Dependent**: Height in cm and height in inches (perfectly correlated)
 - **Near-dependent**: Temperature in Celsius and Fahrenheit (highly correlated but not perfectly)
 
-Question 4. [M] Given two sets of vectors $A = a_1, a_2, a_3, \cdots , a_n$ and $B = b_1, b_2, b_3, \cdots , b_m$. How do you check that they share the same basis?
+## Question 4. [M] Given two sets of vectors $A = a_1, a_2, a_3, \cdots , a_n$ and $B = b_1, b_2, b_3, \cdots , b_m$. How do you check that they share the same basis?
 
 **Solution:** This problem is fundamental in ML for comparing feature spaces and understanding model representations:
 
@@ -342,7 +342,7 @@ Think of this like asking "Do these two sets of building blocks allow us to buil
 - **Method**: Check if medical image features lie in the span of ImageNet features
 - **Result**: Often they don't, requiring fine-tuning or retraining
 
-Question 5. [M] Given $n$ vectors, each of $d$ dimensions. What is the dimension of their span?
+## Question 5. [M] Given $n$ vectors, each of $d$ dimensions. What is the dimension of their span?
 
 **Solution:** Span dimension is crucial in ML for understanding model capacity and feature space complexity:
 
@@ -471,9 +471,9 @@ $$\text{dim}(\text{span}\{v_1, v_2, \ldots, v_n\}) = \text{rank}([v_1, v_2, \ldo
 
 **Key Insight**: The span dimension tells us the true complexity of our data. It's often much lower than the ambient dimension, which is why dimensionality reduction and compression work so well in ML.
 
-6. Norms and metrics
+## 6. Norms and metrics
    
-Question i. [E] What's a norm? What are $L_0, L_1, L_2, L_{\infty}$ norms?
+### Question i. [E] What's a norm? What are $L_0, L_1, L_2, L_{\infty}$ norms?
 
 **Solution:**
 
