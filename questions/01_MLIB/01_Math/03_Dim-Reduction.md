@@ -177,7 +177,10 @@ $$A = \begin{bmatrix}
 
 **Example 3: Partial uniqueness**
 
-$$A = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}$$
+$$A = \begin{bmatrix} 
+1 & 1 \\ 
+0 & 1 
+\end{bmatrix}$$
 
 **Eigenvalues**: $\lambda_1 = \lambda_2 = 1$ (repeated)
 
