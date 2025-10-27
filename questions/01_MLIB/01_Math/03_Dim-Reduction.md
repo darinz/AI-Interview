@@ -255,6 +255,7 @@ x_2
 \end{bmatrix}$$
 
 **Both equations**: $0 = 0$ (no constraints!)
+
 **Solution**: ANY non-zero vector is an eigenvector!
 
 **Examples of valid eigenvectors:**
