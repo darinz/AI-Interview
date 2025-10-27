@@ -41,7 +41,7 @@ The dot product formula $a \cdot b = |a| \cdot |b| \cos(\theta)$ tells us:
 - **Intuition**: Perpendicular vectors are "completely different"
 - **ML Use**: Feature selection - remove features that are too similar (low dot product with target)
 
-Question ii. [E] Given a vector $u$, find vector $v$ of unit length such that the dot product of $u$ and $v$ is maximum.
+### Question ii. [E] Given a vector $u$, find vector $v$ of unit length such that the dot product of $u$ and $v$ is maximum.
 
 **Solution:** This optimization problem is common in ML, particularly in:
 
@@ -91,7 +91,7 @@ Imagine you have a flashlight (vector $u$) and want to point it in the direction
 - **Solution**: Query vectors that align best with key vectors get high attention
 - **Why**: High dot product means high relevance/similarity
 
-2. Outer product
+## 2. Outer product
    
 Question i. [E] Given two vectors $a = [3, 2, 1]$ and $b = [-1, 0, 1]$. Calculate the outer product $a^T b$?
 
