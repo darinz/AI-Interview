@@ -227,7 +227,9 @@ $$A = \begin{bmatrix}
 **Step-by-step eigenvector calculation:**
 
 **Step 1: Find eigenvalues**
+
 Characteristic equation: $\det(A - \lambda I) = 0$
+
 $$\det\begin{bmatrix} 2-\lambda & 0 \\ 0 & 2-\lambda \end{bmatrix} = (2-\lambda)^2 = 0$$
 **Eigenvalues**: $\lambda_1 = \lambda_2 = 2$ (repeated)
 
