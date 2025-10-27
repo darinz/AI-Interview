@@ -819,7 +819,7 @@ $$A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \\ 5 & 6 \end{bmatrix}$$
 
 **Key Insight**: Eigendecomposition and SVD are both powerful matrix factorization techniques, but they have different strengths. Eigendecomposition is great for symmetric matrices and when you need eigenvalues/eigenvectors, while SVD is more general and numerically stable. For PCA, SVD is often preferred because it's more stable and works directly with the data matrix rather than the covariance matrix.
 
-Question 6. [H] How does t-SNE (T-distributed Stochastic Neighbor Embedding) work? Why do we need it?
+## Question 6. [H] How does t-SNE (T-distributed Stochastic Neighbor Embedding) work? Why do we need it?
 
 **Solution:**
 
