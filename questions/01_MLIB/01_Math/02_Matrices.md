@@ -297,7 +297,7 @@ Think of the determinant as measuring volume. If you stretch one dimension by a 
 
 **Key Insight**: This property is fundamental in ML for understanding how data preprocessing, feature scaling, and parameter initialization affect model behavior. It's crucial for maintaining numerical stability and understanding the geometry of transformations.
 
-Question 5. [M] A $4 \times 4$ matrix has four eigenvalues $3, 3, 2, -1$. What can we say about the trace and the determinant of this matrix?
+## Question 5. [M] A $4 \times 4$ matrix has four eigenvalues $3, 3, 2, -1$. What can we say about the trace and the determinant of this matrix?
 
 **Solution:** We can determine both the trace and determinant using the eigenvalues:
 
