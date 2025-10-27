@@ -190,7 +190,7 @@ From first row: $x_2 = 0$
 
 From second row: $-x_2 = 0$ (redundant)
 
-**Solution**: $v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ (any non-zero multiple)
+**Solution**: $`v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}`$ (any non-zero multiple)
 
 **Step 3: Find eigenvector for $\lambda_2 = 2$**
 
