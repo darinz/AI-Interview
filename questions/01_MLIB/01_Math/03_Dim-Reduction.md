@@ -241,7 +241,19 @@ $$\det\begin{bmatrix}
 
 Solve $(A - 2I)v = 0$:
 
-$$\begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$$
+$$\begin{bmatrix} 
+0 & 0 \\ 
+0 & 0 
+\end{bmatrix}
+\begin{bmatrix} 
+x_1 \\ 
+x_2 
+\end{bmatrix} = 
+\begin{bmatrix} 
+0 \\ 
+0 
+\end{bmatrix}$$
+
 **Both equations**: $0 = 0$ (no constraints!)
 **Solution**: ANY non-zero vector is an eigenvector!
 
