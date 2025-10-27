@@ -132,7 +132,7 @@ For a square matrix $A$, the inverse $A^{-1}$ satisfies:
 
 **Key Insight**: In ML, we often avoid computing inverses directly due to computational cost and numerical issues. Instead, we use iterative methods, factorizations, or regularization techniques.
 
-Question 3. [E] What does the determinant of a matrix represent?
+## Question 3. [E] What does the determinant of a matrix represent?
 
 **Solution:** The determinant is a fundamental scalar value that captures important geometric and algebraic properties of matrices:
 
