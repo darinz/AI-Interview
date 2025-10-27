@@ -519,7 +519,7 @@ For a matrix $A$, if $Av = \lambda v$ where $v \neq 0$, then:
 
 **Key Insight**: Eigenvalues and eigenvectors are fundamental to understanding and manipulating data in ML. They capture the essential structure of matrices and transformations, making them indispensable for dimensionality reduction, clustering, ranking, and many other ML tasks. The key is choosing the right algorithm and handling numerical stability issues.
 
-Question 4. [M] We want to do PCA on a dataset with multiple features in different ranges. For example, one feature is in the range 0-1 and another is in the range 10-1000. Will PCA work on this dataset?
+## Question 4. [M] We want to do PCA on a dataset with multiple features in different ranges. For example, one feature is in the range 0-1 and another is in the range 10-1000. Will PCA work on this dataset?
 
 **Solution:**
 
