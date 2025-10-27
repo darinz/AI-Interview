@@ -392,7 +392,7 @@ Eigenvalues are the "fundamental frequencies" of a matrix transformation. The tr
 
 **Key Insight**: The eigenvalues reveal that this matrix represents a transformation with both stable and unstable directions, which is common in ML optimization problems. The negative determinant indicates an orientation flip, and the mixed signs suggest potential optimization challenges.
 
-Question 6. [M] Given the following matrix:
+## Question 6. [M] Given the following matrix:
    
 $$
 \begin{bmatrix}
